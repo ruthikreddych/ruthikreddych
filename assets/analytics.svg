@@ -120,6 +120,7 @@
 
       <!-- subtle floating shimmer overlay across bars (moves left→right) -->
       
+        <animate attributeName="x" values="-20;360;-20" dur="4.8s" repeatCount="indefinite"/>
       </rect>
     </g>
   </g>
