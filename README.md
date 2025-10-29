@@ -48,9 +48,9 @@
       </g>
       <!-- Fade carousel -->
       <g>
-        <animate xlink:href="#line1" attributeName="opacity" values="1;0;0" dur="9s" repeatCount="indefinite"/>
-        <animate xlink:href="#line2" attributeName="opacity" values="0;1;0" dur="9s" begin="3s" repeatCount="indefinite"/>
-        <animate xlink:href="#line3" attributeName="opacity" values="0;0;1" dur="9s" begin="6s" repeatCount="indefinite"/>
+        <animate href="#line1" attributeName="opacity" values="1;0;0" dur="9s" repeatCount="indefinite"/>
+        <animate href="#line2" attributeName="opacity" values="0;1;0" dur="9s" begin="3s" repeatCount="indefinite"/>
+        <animate href="#line3" attributeName="opacity" values="0;0;1" dur="9s" begin="6s" repeatCount="indefinite"/>
       </g>
     </g>
 
@@ -63,7 +63,7 @@
           <text x="70" y="7" fill="#e5e7eb" font-size="14" font-family="Segoe UI, Roboto, sans-serif">SQL • Python • Power BI • Tableau • Snowflake • Redshift • dbt • Airflow</text>
         </g>
       </g>
-      <animateTransform xlink:href="#marquee" attributeName="transform" type="translate" from="0 0" to="-260 0" dur="12s" repeatCount="indefinite"/>
+      <animateTransform href="#marquee" attributeName="transform" type="translate" from="0 0" to="-260 0" dur="12s" repeatCount="indefinite"/>
     </g>
   </svg>
 </p>
@@ -105,10 +105,10 @@ Data Analyst with ~5 years experience turning complex datasets into clear busine
       <text id="t4" x="30" y="36" opacity="0">✅ Data quality checks reduced erroneous trade entries by 91%</text>
     </g>
     <g>
-      <animate xlink:href="#t1" attributeName="opacity" values="1;0;0;0" dur="12s" repeatCount="indefinite"/>
-      <animate xlink:href="#t2" attributeName="opacity" values="0;1;0;0" dur="12s" begin="3s" repeatCount="indefinite"/>
-      <animate xlink:href="#t3" attributeName="opacity" values="0;0;1;0" dur="12s" begin="6s" repeatCount="indefinite"/>
-      <animate xlink:href="#t4" attributeName="opacity" values="0;0;0;1" dur="12s" begin="9s" repeatCount="indefinite"/>
+      <animate href="#t1" attributeName="opacity" values="1;0;0;0" dur="12s" repeatCount="indefinite"/>
+      <animate href="#t2" attributeName="opacity" values="0;1;0;0" dur="12s" begin="3s" repeatCount="indefinite"/>
+      <animate href="#t3" attributeName="opacity" values="0;0;1;0" dur="12s" begin="6s" repeatCount="indefinite"/>
+      <animate href="#t4" attributeName="opacity" values="0;0;0;1" dur="12s" begin="9s" repeatCount="indefinite"/>
     </g>
     <rect x="10" y="12" width="4" height="36" rx="2" fill="url(#grad)"/>
   </svg>
