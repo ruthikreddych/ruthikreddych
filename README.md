@@ -1,7 +1,7 @@
 # Hi, I’m **Ruthik Reddy** 👋
 
 <p align="center">
-  <img src="assets/hero.svg" width="900" alt="Hero animation"/>
+  <img src="./assets/hero.svg" width="900" alt="Hero animation"/>
 </p>
 
 <p align="center">
