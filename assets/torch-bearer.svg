@@ -208,7 +208,23 @@
       </rect>
       <!-- flame shimmer -->
 
- 
+ <!-- flame shimmer -->
+      <g filter="url(#softGlow)">
+        <path d="M0,-20 q-8,10 0,18 q8,-8 0,-18" fill="url(#flameGlow)">
+          <animate attributeName="d" dur="0.7s" repeatCount="indefinite"
+                   values="M0,-20 q-8,10 0,18 q8,-8 0,-18; M0,-22 q-9,12 0,20 q9,-10 0,-20; M0,-20 q-8,10 0,18 q8,-8 0,-18"/>
+        </path>
+        <circle cx="0" cy="-10" r="5" fill="url(#gradFlame)" opacity="0.8">
+          <animate attributeName="r" values="5;6;5" dur="0.7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
+    <!-- Sparkline trail (behind) -->
+    <path id="trail" d="M -160 -8 Q -120 -2 -80 -6 T 0 -2" fill="none" stroke="#22d3ee" stroke-width="2"
+          opacity="0.6" stroke-dasharray="100" stroke-dashoffset="100" filter="url(#softGlow)">
+      <animate attributeName="stroke-dashoffset" values="100;0" dur="0.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
 
   <!-- ======= MOTION ======= -->
   <animateMotion id="runnerAnim" href="#avatar" dur="7s" repeatCount="indefinite" rotate="auto">
