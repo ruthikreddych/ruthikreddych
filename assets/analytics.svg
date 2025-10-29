@@ -1,4 +1,6 @@
-<svg viewBox="0 0 1100 260" width="1100" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analytics Vibrant">
+<svg viewBox="0 0 1100 260" width="1100" height="260"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     role="img" aria-label="Analytics Vibrant — with motion">
   <style><![CDATA[
     .t{font:700 18px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}
     .a{fill:none;stroke:#06b6d4;stroke-width:3}
@@ -10,57 +12,116 @@
     <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.28"/>
     </filter>
+
+    <!-- glow for moving dot -->
+    <filter id="dotGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- subtle shimmer for bars -->
+    <linearGradient id="barShimmer" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffd77a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <!-- animate gradient translation to create shimmer -->
+      <animate attributeName="gradientTransform" type="translate"
+               values="-1 0;1 0;-1 0" dur="2.6s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
 
   <rect x="0" y="0" width="1100" height="260" fill="#070b16" rx="18"/>
   <text class="t" x="32" y="40">Mini Analytics</text>
 
-  <!-- ============ LINE CHART (robust draw-on animation) ============ -->
+  <!-- ============ LINE CHART (robust draw-on animation + moving marker) ============ -->
   <g transform="translate(32,56)" filter="url(#cardShadow)">
     <rect x="0" y="0" width="500" height="170" rx="16" fill="#0f172a"/>
     <g transform="translate(24,24)">
       <path class="grid" d="M0,0 H452 M0,40 H452 M0,80 H452 M0,120 H452" fill="none"/>
-      <!-- Final shape only; animate stroke drawing instead of 'd' -->
+      <!-- Final shape only; animate stroke drawing -->
       <path id="line" class="a"
             d="M0,120 Q80,95 160,88 T320,66 T440,44"
             vector-effect="non-scaling-stroke"
             stroke-linecap="round" stroke-linejoin="round"
             stroke-dasharray="600" stroke-dashoffset="600">
-        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="2.2s" begin="0s" fill="freeze"/>
+        <animate id="lineDraw" attributeName="stroke-dashoffset" from="600" to="0" dur="2.2s" begin="0s" fill="freeze"/>
       </path>
+
+      <!-- moving marker that follows the path after it is drawn -->
+      <g id="marker" opacity="0" filter="url(#dotGlow)">
+        <circle r="5.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1.6"/>
+      </g>
+      <animate xlink:href="#marker" attributeName="opacity" from="0" to="1" begin="lineDraw.end" dur="0.15s" fill="freeze"/>
+
+      <animateMotion xlink:href="#marker" begin="lineDraw.end" dur="4s" repeatCount="indefinite" rotate="auto">
+        <mpath xlink:href="#line"/>
+      </animateMotion>
+
+      <!-- optional trailing dot (fades) to make motion feel alive -->
+      <g id="trail" opacity="0.35" filter="url(#dotGlow)">
+        <circle r="3.5" fill="#60a5fa" />
+      </g>
+      <animate xlink:href="#trail" attributeName="opacity" values="0.35;0.05;0.35" dur="4s" begin="lineDraw.end" repeatCount="indefinite"/>
+      <animateMotion xlink:href="#trail" begin="lineDraw.end" dur="4s" repeatCount="indefinite" rotate="auto">
+        <mpath xlink:href="#line"/>
+      </animateMotion>
     </g>
   </g>
 
-  <!-- ============ BAR CHART (upward, aligned) ============ -->
+  <!-- ============ BAR CHART (initial grow then continuous subtle motion) ============ -->
   <g transform="translate(568,56)" filter="url(#cardShadow)">
     <rect x="0" y="0" width="500" height="170" rx="16" fill="#0f172a"/>
     <g transform="translate(28,20)">
       <!-- Baseline y = 130 -->
 
       <!-- Bar 1 -->
-      <rect id="bar1" class="bar" x="0" y="130" width="48" height="0"/>
-      <animate href="#bar1" attributeName="y" values="130;80" dur="1.4s" begin="0s" fill="freeze"/>
-      <animate href="#bar1" attributeName="height" values="0;50" dur="1.4s" begin="0s" fill="freeze"/>
+      <rect id="bar1" class="bar" x="0"   y="130" width="48" height="0" fill="url(#barShimmer)"/>
+      <animate id="bar1Y"  href="#bar1" attributeName="y"      values="130;80"  dur="1.4s" begin="0s" fill="freeze"/>
+      <animate id="bar1H"  href="#bar1" attributeName="height" values="0;50"   dur="1.4s" begin="0s" fill="freeze"/>
+      <!-- continuous gentle bounce -->
+      <animateTransform href="#bar1" attributeName="transform" attributeType="XML"
+                        type="translate" values="0 0;0 -6;0 0" dur="2.6s"
+                        begin="bar1H.end+0.1s" repeatCount="indefinite" additive="replace"/>
 
       <!-- Bar 2 -->
-      <rect id="bar2" class="bar" x="70" y="130" width="48" height="0"/>
-      <animate href="#bar2" attributeName="y" values="130;50" dur="1.6s" begin="0s" fill="freeze"/>
-      <animate href="#bar2" attributeName="height" values="0;80" dur="1.6s" begin="0s" fill="freeze"/>
+      <rect id="bar2" class="bar" x="70"  y="130" width="48" height="0" fill="url(#barShimmer)"/>
+      <animate id="bar2Y"  href="#bar2" attributeName="y"      values="130;50"  dur="1.6s" begin="0s" fill="freeze"/>
+      <animate id="bar2H"  href="#bar2" attributeName="height" values="0;80"   dur="1.6s" begin="0s" fill="freeze"/>
+      <animateTransform href="#bar2" attributeName="transform" attributeType="XML"
+                        type="translate" values="0 0;0 -8;0 0" dur="3s"
+                        begin="bar2H.end+0.1s" repeatCount="indefinite" additive="replace"/>
 
       <!-- Bar 3 -->
-      <rect id="bar3" class="bar" x="140" y="130" width="48" height="0"/>
-      <animate href="#bar3" attributeName="y" values="130;70" dur="1.8s" begin="0s" fill="freeze"/>
-      <animate href="#bar3" attributeName="height" values="0;60" dur="1.8s" begin="0s" fill="freeze"/>
+      <rect id="bar3" class="bar" x="140" y="130" width="48" height="0" fill="url(#barShimmer)"/>
+      <animate id="bar3Y"  href="#bar3" attributeName="y"      values="130;70"  dur="1.8s" begin="0s" fill="freeze"/>
+      <animate id="bar3H"  href="#bar3" attributeName="height" values="0;60"   dur="1.8s" begin="0s" fill="freeze"/>
+      <animateTransform href="#bar3" attributeName="transform" attributeType="XML"
+                        type="translate" values="0 0;0 -5;0 0" dur="2.4s"
+                        begin="bar3H.end+0.1s" repeatCount="indefinite" additive="replace"/>
 
       <!-- Bar 4 (tallest) -->
-      <rect id="bar4" class="bar" x="210" y="130" width="48" height="0"/>
-      <animate href="#bar4" attributeName="y" values="130;30" dur="2s" begin="0s" fill="freeze"/>
-      <animate href="#bar4" attributeName="height" values="0;100" dur="2s" begin="0s" fill="freeze"/>
+      <rect id="bar4" class="bar" x="210" y="130" width="48" height="0" fill="url(#barShimmer)"/>
+      <animate id="bar4Y"  href="#bar4" attributeName="y"      values="130;30"  dur="2s" begin="0s" fill="freeze"/>
+      <animate id="bar4H"  href="#bar4" attributeName="height" values="0;100"  dur="2s" begin="0s" fill="freeze"/>
+      <animateTransform href="#bar4" attributeName="transform" attributeType="XML"
+                        type="translate" values="0 0;0 -10;0 0" dur="3.2s"
+                        begin="bar4H.end+0.1s" repeatCount="indefinite" additive="replace"/>
 
       <!-- Bar 5 -->
-      <rect id="bar5" class="bar" x="280" y="130" width="48" height="0"/>
-      <animate href="#bar5" attributeName="y" values="130;65" dur="2.2s" begin="0s" fill="freeze"/>
-      <animate href="#bar5" attributeName="height" values="0;65" dur="2.2s" begin="0s" fill="freeze"/>
+      <rect id="bar5" class="bar" x="280" y="130" width="48" height="0" fill="url(#barShimmer)"/>
+      <animate id="bar5Y"  href="#bar5" attributeName="y"      values="130;65"  dur="2.2s" begin="0s" fill="freeze"/>
+      <animate id="bar5H"  href="#bar5" attributeName="height" values="0;65"   dur="2.2s" begin="0s" fill="freeze"/>
+      <animateTransform href="#bar5" attributeName="transform" attributeType="XML"
+                        type="translate" values="0 0;0 -7;0 0" dur="2.8s"
+                        begin="bar5H.end+0.1s" repeatCount="indefinite" additive="replace"/>
+
+      <!-- subtle floating shimmer overlay across bars (moves left→right) -->
+      <rect x="-20" y="30" width="360" height="80" rx="8" fill="url(#barShimmer)" opacity="0.06" pointer-events="none">
+        <animate attributeName="x" values="-20;360;-20" dur="4.8s" repeatCount="indefinite"/>
+      </rect>
     </g>
   </g>
 </svg>
