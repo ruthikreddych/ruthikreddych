@@ -15,7 +15,7 @@
 
   <!-- SQL Server -->
   <g transform="translate(32,90)">
-    <rect class="badge" fill="#070b16"/>
+    <rect class="badge" fill="#111827"/>
     <g transform="translate(5,7) scale(0.95)">
       <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
       <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
@@ -27,7 +27,7 @@
 
   <!-- Python -->
   <g transform="translate(32,140)">
-    <rect class="badge" fill="#070b16"/>
+    <rect class="badge" fill="#111827"/>
     <g transform="translate(9,7) scale(0.95)">
       <circle cx="0" cy="10" r="8" fill="#3776ab"/>
       <circle cx="6" cy="6" r="3" fill="#ffd43b"/>
