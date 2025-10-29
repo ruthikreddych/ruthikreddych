@@ -52,7 +52,7 @@
   <!-- Chip 2: LinkedIn (accent gradient) -->
   <g id="chip-linkedin" transform="translate(400,72)" filter="url(#cardShadow)">
     <rect x="0" y="-24" width="302" height="48" rx="16" fill="url(#accent)"/>
-    <rect x="0" y="-24" width="300" height="48" rx="16" fill="url(#shine)" opacity="0.35"/>
+    <rect x="0" y="-24" width="500" height="48" rx="16" fill="url(#shine)" opacity="0.35"/>
     <text class="text" x="18" y="6">🔗  linkedin.com/in/ruthikreddy-cheruku/</text>
   </g>
 
