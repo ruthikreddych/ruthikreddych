@@ -4,7 +4,7 @@
   <rect x="0" y="0" width="1100" height="140" fill="#070b16" rx="18"/>
   <text class="t" x="32" y="46">Contact</text>
   <g id="email" transform="translate(32,78)" filter="url(#cardShadow)">
-    <rect x="0" y="-22" width="300" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
+    <rect x="0" y="-22" width="400" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
     <text class="s" x="18" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
   </g>
   <g id="li" transform="translate(480,78)" filter="url(#cardShadow)">
