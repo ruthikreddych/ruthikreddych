@@ -52,7 +52,7 @@
   <!-- ======= CHECKPOINT CARDS (activate as avatar passes) ======= -->
   <!-- Bars Card -->
   <g id="cardBars" transform="translate(240,78)" filter="url(#cardShadow)">
-    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#0f172a"/>
+    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#000"/>
     <text x="-64" y="-2" class="small">KPIs</text>
     <g transform="translate(-64,8)">
       <rect x="0" y="52" width="24" height="0" fill="#22c55e" rx="4">
