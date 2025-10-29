@@ -119,8 +119,7 @@
                         begin="bar5H.end+0.1s" repeatCount="indefinite" additive="replace"/>
 
       <!-- subtle floating shimmer overlay across bars (moves left→right) -->
-      <rect x="-20" y="30" width="360" height="80" rx="8" fill="url(#barShimmer)" opacity="0.06" pointer-events="none">
-        <animate attributeName="x" values="-20;360;-20" dur="4.8s" repeatCount="indefinite"/>
+      
       </rect>
     </g>
   </g>
