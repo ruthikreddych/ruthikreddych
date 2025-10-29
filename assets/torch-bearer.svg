@@ -1,265 +1,246 @@
-<svg viewBox="0 0 1200 320" width="1200" height="320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Creative Data Analyst — Torch Relay of Insights">
-  <title>Ruthik Reddy Cheruku — Data Analyst • Turning Data into Decisions</title>
+<svg viewBox="0 0 1200 300" width="1200" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Creative Data Analyst Torch Animation — Ruthik Reddy Cheruku">
+  <title>Creative Data Analyst — Passing the Insights</title>
 
-  <!-- ============== STYLES ============== -->
-  <style><![CDATA[
-    .ui { font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif }
-    .title { font-weight:700; fill:#e5e7eb }
-    .subtitle { font-weight:600; fill:#cbd5e1 }
-    .kpi { font-weight:700; fill:#0ea5e9 }
-  ]]></style>
-
-  <!-- ============== DEFINITIONS ============== -->
+  <!-- ======= DEFS ======= -->
   <defs>
-    <!-- Background + track palette -->
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1120"/><stop offset="100%" stop-color="#070b16"/>
+    <!-- Color Gradients -->
+    <linearGradient id="gradTrack" x1="0" x2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/><stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-    <linearGradient id="trackGrad" x1="0" x2="1">
-      <stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="gradDash" x1="0" x2="1">
+      <stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/>
     </linearGradient>
-
-    <!-- Gradient Fusion Flame (gold → orange → teal → electric blue) -->
-    <linearGradient id="flameLine" x1="0" x2="1">
-      <stop offset="0%" stop-color="#f7c948"/><!-- gold -->
-      <stop offset="35%" stop-color="#f59e0b"/><!-- orange -->
-      <stop offset="65%" stop-color="#14b8a6"/><!-- teal -->
-      <stop offset="100%" stop-color="#0ea5e9"/><!-- electric blue -->
+    <linearGradient id="gradFlame" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#f97316"/>
     </linearGradient>
-    <radialGradient id="flameFill" cx="50%" cy="35%" r="65%">
-      <stop offset="0%" stop-color="#fff7cc"/>
-      <stop offset="45%" stop-color="#ffb347"/>
-      <stop offset="75%" stop-color="#2dd4bf"/>
-      <stop offset="100%" stop-color="#0ea5e9"/>
+    <radialGradient id="flameGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff6cc"/><stop offset="50%" stop-color="#ffb347"/><stop offset="100%" stop-color="#ff512f"/>
     </radialGradient>
 
-    <!-- Soft glow & shadows -->
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+    <!-- Glows & Shadows -->
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="cardShadow" x="-35%" y="-35%" width="170%" height="170%">
-      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    <filter id="cardShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
     </filter>
 
-    <!-- Path for the run -->
-    <path id="runPath" d="M 30 250 C 250 210, 380 270, 560 235 S 960 205, 1170 250" fill="none"/>
+    <!-- Motion Path (Data Track Curve) -->
+    <path id="runPath" d="M 40 230 C 260 190, 360 250, 540 220 S 940 190, 1160 230" fill="none"/>
 
-    <!-- Tiny spark used in confetti -->
-    <g id="confetti">
-      <rect x="-1.5" y="-6" width="3" height="12" rx="1" fill="#f59e0b"/>
-      <rect x="-1.2" y="-4" width="2.4" height="8" rx="1" fill="#22d3ee" transform="rotate(35)"/>
-      <circle r="1.6" fill="#a78bfa" transform="translate(0,5)"/>
-    </g>
+    <!-- Tiny Easing Tweaks (used via keySplines) -->
+    <style>
+      .title { font: 700 22px Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#e5e7eb }
+      .small { font: 600 12px Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill:#cbd5e1 }
+    </style>
   </defs>
 
-  <!-- ============== BACKGROUND / TITLES ============== -->
-  <rect x="0" y="0" width="1200" height="320" fill="url(#bgGrad)"/>
-  <text x="50%" y="40" text-anchor="middle" class="ui title" font-size="22">Turning Data into Decisions — Insights • Accuracy • Impact</text>
-  <text x="50%" y="64" text-anchor="middle" class="ui subtitle" font-size="16">Ruthik Reddy Cheruku — Data Analyst</text>
+  <!-- ======= BACKGROUND & TAGLINES ======= -->
+  <rect x="0" y="0" width="1200" height="300" fill="#070b16"/>
+  <text x="50%" y="40" text-anchor="middle" class="title">Turning Data into Decisions — Insights • Accuracy • Impact</text>
+  <!-- Watermark (bottom-right) -->
+  <text x="1180" y="288" text-anchor="end" class="small" fill="#9ca3af">Ruthik Reddy Cheruku — Data Analyst</text>
 
-  <!-- Track -->
-  <rect x="0" y="228" width="1200" height="48" rx="24" fill="url(#trackGrad)" opacity="0.22"/>
+  <!-- ======= TRACK ======= -->
+  <rect x="0" y="210" width="1200" height="44" rx="22" fill="url(#gradTrack)" opacity="0.22"/>
   <g opacity="0.25">
-    <circle cx="120" cy="252" r="2" fill="#e5e7eb"/>
-    <circle cx="360" cy="252" r="2" fill="#e5e7eb"/>
-    <circle cx="600" cy="252" r="2" fill="#e5e7eb"/>
-    <circle cx="840" cy="252" r="2" fill="#e5e7eb"/>
-    <circle cx="1080" cy="252" r="2" fill="#e5e7eb"/>
+    <circle cx="120" cy="232" r="2" fill="#e5e7eb"/><circle cx="360" cy="232" r="2" fill="#e5e7eb"/>
+    <circle cx="600" cy="232" r="2" fill="#e5e7eb"/><circle cx="840" cy="232" r="2" fill="#e5e7eb"/>
+    <circle cx="1080" cy="232" r="2" fill="#e5e7eb"/>
   </g>
 
-  <!-- ============== REACTIVE CHECKPOINT CARDS ============== -->
-
-  <!-- KPI Bars Card -->
-  <g id="cardBars" transform="translate(220,96)" filter="url(#cardShadow)">
-    <rect x="-86" y="-12" width="190" height="96" rx="12" fill="#0f172a"/>
-    <text x="-70" y="2" class="ui subtitle" font-size="12">KPIs</text>
-    <g transform="translate(-70,14)">
-      <rect id="b1" x="0" y="60" width="26" height="0" rx="4" fill="#22c55e"/>
-      <rect id="b2" x="34" y="60" width="26" height="0" rx="4" fill="#06b6d4"/>
-      <rect id="b3" x="68" y="60" width="26" height="0" rx="4" fill="#a78bfa"/>
-      <rect id="b4" x="102" y="60" width="26" height="0" rx="4" fill="#f59e0b"/>
-      <!-- growth when avatar passes -->
-      <animate href="#b1" attributeName="height" values="0;44" dur="0.9s" begin="runnerAnim.begin+1.1s" fill="freeze"/>
-      <animate href="#b1" attributeName="y"      values="60;16" dur="0.9s" begin="runnerAnim.begin+1.1s" fill="freeze"/>
-      <animate href="#b2" attributeName="height" values="0;30" dur="0.9s" begin="runnerAnim.begin+1.15s" fill="freeze"/>
-      <animate href="#b2" attributeName="y"      values="60;30" dur="0.9s" begin="runnerAnim.begin+1.15s" fill="freeze"/>
-      <animate href="#b3" attributeName="height" values="0;52" dur="0.9s" begin="runnerAnim.begin+1.2s" fill="freeze"/>
-      <animate href="#b3" attributeName="y"      values="60;8"  dur="0.9s" begin="runnerAnim.begin+1.2s"  fill="freeze"/>
-      <animate href="#b4" attributeName="height" values="0;36" dur="0.9s" begin="runnerAnim.begin+1.25s" fill="freeze"/>
-      <animate href="#b4" attributeName="y"      values="60;24" dur="0.9s" begin="runnerAnim.begin+1.25s" fill="freeze"/>
-      <!-- pulse on card -->
-      <animate attributeName="opacity" values="1;1;0.85;1" dur="1.2s" begin="runnerAnim.begin+1.1s"/>
+  <!-- ======= CHECKPOINT CARDS (activate as avatar passes) ======= -->
+  <!-- Bars Card -->
+  <g id="cardBars" transform="translate(240,78)" filter="url(#cardShadow)">
+    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#0f172a"/>
+    <text x="-64" y="-2" class="small">KPIs</text>
+    <g transform="translate(-64,8)">
+      <rect x="0" y="52" width="24" height="0" fill="#22c55e" rx="4">
+        <animate attributeName="height" values="0;40" dur="1.0s" begin="runnerAnim.begin+0.9s" fill="freeze"/>
+        <animate attributeName="y" values="52;12" dur="1.0s" begin="runnerAnim.begin+0.9s" fill="freeze"/>
+      </rect>
+      <rect x="32" y="52" width="24" height="0" fill="#06b6d4" rx="4">
+        <animate attributeName="height" values="0;28" dur="1.0s" begin="runnerAnim.begin+1.0s" fill="freeze"/>
+        <animate attributeName="y" values="52;24" dur="1.0s" begin="runnerAnim.begin+1.0s" fill="freeze"/>
+      </rect>
+      <rect x="64" y="52" width="24" height="0" fill="#a78bfa" rx="4">
+        <animate attributeName="height" values="0;50" dur="1.0s" begin="runnerAnim.begin+1.1s" fill="freeze"/>
+        <animate attributeName="y" values="52;2"  dur="1.0s" begin="runnerAnim.begin+1.1s" fill="freeze"/>
+      </rect>
+      <rect x="96" y="52" width="24" height="0" fill="#f59e0b" rx="4">
+        <animate attributeName="height" values="0;34" dur="1.0s" begin="runnerAnim.begin+1.2s" fill="freeze"/>
+        <animate attributeName="y" values="52;18" dur="1.0s" begin="runnerAnim.begin+1.2s" fill="freeze"/>
+      </rect>
     </g>
   </g>
 
-  <!-- Pie Segments Card -->
-  <g id="cardPie" transform="translate(560,86)" filter="url(#cardShadow)">
-    <rect x="-86" y="-12" width="190" height="96" rx="12" fill="#0f172a"/>
-    <text x="-70" y="2" class="ui subtitle" font-size="12">Segments</text>
-    <g transform="translate(-40,16)">
-      <circle cx="0" cy="34" r="18" fill="#0b1220" stroke="#1f2937" stroke-width="2"/>
-      <circle id="pie" cx="0" cy="34" r="18" fill="none" stroke="#22d3ee" stroke-width="10"
-              stroke-dasharray="0 120">
-        <animate attributeName="stroke-dasharray" values="0 120;86 120" dur="0.8s" begin="runnerAnim.begin+3.2s" fill="freeze"/>
+  <!-- Pie Card -->
+  <g id="cardPie" transform="translate(560,70)" filter="url(#cardShadow)">
+    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#0f172a"/>
+    <text x="-64" y="-2" class="small">Segments</text>
+    <g transform="translate(10,6)">
+      <circle cx="20" cy="36" r="16" fill="#0b1220" stroke="#1f2937" stroke-width="2"/>
+      <circle cx="20" cy="36" r="16" fill="none" stroke="#22d3ee" stroke-width="10"
+              stroke-dasharray="0 100">
+        <animate attributeName="stroke-dasharray" values="0 100;72 100" dur="0.8s" begin="runnerAnim.begin+3.0s" fill="freeze"/>
       </circle>
-      <rect id="lg1" x="28" y="16" width="0" height="8" rx="3" fill="#22d3ee"/>
-      <rect id="lg2" x="28" y="32" width="0" height="8" rx="3" fill="#a78bfa"/>
-      <rect id="lg3" x="28" y="48" width="0" height="8" rx="3" fill="#f59e0b"/>
-      <animate href="#lg1" attributeName="width" values="0;60" dur="0.6s" begin="runnerAnim.begin+3.25s" fill="freeze"/>
-      <animate href="#lg2" attributeName="width" values="0;46" dur="0.6s" begin="runnerAnim.begin+3.35s" fill="freeze"/>
-      <animate href="#lg3" attributeName="width" values="0;34" dur="0.6s" begin="runnerAnim.begin+3.45s" fill="freeze"/>
-      <animate attributeName="opacity" values="1;1;0.85;1" dur="1s" begin="runnerAnim.begin+3.2s"/>
+      <rect x="60" y="18" width="0" height="8" fill="#22d3ee" rx="3">
+        <animate attributeName="width" values="0;58" dur="0.6s" begin="runnerAnim.begin+3.05s" fill="freeze"/>
+      </rect>
+      <rect x="60" y="34" width="0" height="8" fill="#a78bfa" rx="3">
+        <animate attributeName="width" values="0;44" dur="0.6s" begin="runnerAnim.begin+3.15s" fill="freeze"/>
+      </rect>
+      <rect x="60" y="50" width="0" height="8" fill="#f59e0b" rx="3">
+        <animate attributeName="width" values="0;32" dur="0.6s" begin="runnerAnim.begin+3.25s" fill="freeze"/>
+      </rect>
     </g>
   </g>
 
   <!-- Dashboard Tiles Card -->
-  <g id="cardDash" transform="translate(940,84)" filter="url(#cardShadow)">
-    <rect x="-104" y="-12" width="208" height="108" rx="12" fill="#0f172a"/>
-    <!-- two small tiles -->
-    <g transform="translate(-88,6)">
-      <rect x="0" y="0" width="84" height="38" rx="8" fill="#0b1220" stroke="#1f2937"/>
-      <text x="10" y="16" class="ui subtitle" font-size="10">Churn</text>
-      <rect id="churnBar" x="10" y="26" width="0" height="6" rx="3" fill="#22c55e"/>
-      <animate href="#churnBar" attributeName="width" values="0;64" dur="0.7s" begin="runnerAnim.begin+5.25s" fill="freeze"/>
+  <g id="cardTiles" transform="translate(940,66)" filter="url(#cardShadow)">
+    <rect x="-100" y="-10" width="200" height="100" rx="10" fill="#0f172a"/>
+    <!-- Tile 1 -->
+    <g transform="translate(-84,6)">
+      <rect x="0" y="0" width="80" height="36" rx="8" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="10" y="24" width="0" height="6" fill="#22c55e" rx="3">
+        <animate attributeName="width" values="0;60" dur="0.6s" begin="runnerAnim.begin+5.0s" fill="freeze"/>
+      </rect>
+      <text x="10" y="16" class="small">Churn</text>
     </g>
+    <!-- Tile 2 -->
     <g transform="translate(6,6)">
-      <rect x="0" y="0" width="84" height="38" rx="8" fill="#0b1220" stroke="#1f2937"/>
-      <text x="10" y="16" class="ui subtitle" font-size="10">Revenue</text>
-      <rect id="revBar" x="10" y="26" width="0" height="6" rx="3" fill="#06b6d4"/>
-      <animate href="#revBar" attributeName="width" values="0;52" dur="0.7s" begin="runnerAnim.begin+5.35s" fill="freeze"/>
+      <rect x="0" y="0" width="80" height="36" rx="8" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="10" y="24" width="0" height="6" fill="#06b6d4" rx="3">
+        <animate attributeName="width" values="0;48" dur="0.6s" begin="runnerAnim.begin+5.1s" fill="freeze"/>
+      </rect>
+      <text x="10" y="16" class="small">Revenue</text>
     </g>
-    <!-- sparkline tile -->
-    <g id="flipTile" transform="translate(-88,50)">
-      <rect x="0" y="0" width="178" height="40" rx="8" fill="#0b1220" stroke="#1f2937"/>
-      <path id="spark" d="M10,26 Q40,12 70,18 T150,10" fill="none" stroke="#a78bfa" stroke-width="2"
+    <!-- Tile 3 -->
+    <g transform="translate(-84,48)">
+      <rect x="0" y="0" width="170" height="36" rx="8" fill="#0b1220" stroke="#1f2937"/>
+      <path d="M10,22 Q40,10 70,16 T130,8" fill="none" stroke="#a78bfa" stroke-width="2"
             stroke-dasharray="180" stroke-dashoffset="180">
-        <animate attributeName="stroke-dashoffset" values="180;0" dur="0.9s" begin="runnerAnim.begin+5.6s" fill="freeze"/>
+        <animate attributeName="stroke-dashoffset" values="180;0" dur="0.8s" begin="runnerAnim.begin+5.2s" fill="freeze"/>
       </path>
-      <!-- subtle flip -->
-      <animateTransform attributeName="transform" type="rotate" values="0 89 20; 0 89 20; 8 89 20; 0 89 20"
-                        keyTimes="0;0.75;0.9;1" dur="1.2s" begin="runnerAnim.begin+5.55s" fill="freeze"/>
+      <text x="10" y="13" class="small">Trend</text>
     </g>
-    <animate attributeName="opacity" values="1;1;0.85;1" dur="1s" begin="runnerAnim.begin+5.2s"/>
   </g>
 
-  <!-- ============== ANALYST AVATAR (replaces runner) ============== -->
+  <!-- ======= ANALYST AVATAR (replaces runner) ======= -->
   <g id="avatar">
-    <!-- speed-reactive trail -->
-    <path id="trail" d="M -160 -8 Q -130 -2 -100 -6 T -40 -2" fill="none" stroke="url(#flameLine)" stroke-width="2"
-          opacity="0.65" stroke-dasharray="110" stroke-dashoffset="110" filter="url(#glow)">
-      <animate attributeName="stroke-dashoffset" values="110;0" dur="0.7s" repeatCount="indefinite"/>
-    </path>
-
-    <!-- ground shadow -->
-    <ellipse cx="0" cy="22" rx="28" ry="7" fill="#000" opacity="0.28">
-      <animate attributeName="rx" values="28;25;28" dur="0.6s" repeatCount="indefinite"/>
+    <!-- Shadow -->
+    <ellipse cx="0" cy="22" rx="26" ry="6" fill="#000" opacity="0.30">
+      <animate attributeName="rx" values="26;22;26" dur="0.6s" repeatCount="indefinite"/>
     </ellipse>
 
-    <!-- head + hair (short & neat) -->
-    <circle cx="0" cy="-48" r="12" fill="#fdebd0"/>
-    <path d="M-10,-52 q10 -10 20 0 q-6 2 -10 2 q-6 0 -10 -2" fill="#334155"/>
-
-    <!-- spectacles -->
-    <g fill="none" stroke="#94a3b8" stroke-width="1.5">
-      <rect x="-10" y="-52" width="8" height="6" rx="2"/>
-      <rect x="2" y="-52" width="8" height="6" rx="2"/>
-      <line x1="-2" y1="-49" x2="2" y2="-49"/>
+    <!-- Laptop bag (right side behind) -->
+    <g transform="translate(-20,-18)">
+      <rect x="-16" y="0" width="30" height="22" rx="5" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="-2" y="-14" width="4" height="16" fill="#1e40af"/>
+      <path d="M-16,0 Q-20,-8 -2,-14" fill="none" stroke="#1e40af" stroke-width="3"/>
     </g>
 
-    <!-- headset -->
-    <g>
-      <path d="M-12,-50 q12 -12 24 0" fill="none" stroke="#334155" stroke-width="3"/>
-      <rect x="10" y="-46" width="8" height="10" rx="2" fill="#1f2937"/>
-      <rect x="14" y="-38" width="10" height="3" rx="1.5" fill="#0ea5e9"/>
-      <animate attributeName="opacity" values="1;0.8;1" dur="1.2s" repeatCount="indefinite"/>
+    <!-- Body -->
+    <rect x="-10" y="-36" width="20" height="40" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
+    <!-- Blue tie -->
+    <path d="M0,-36 l-4,8 l4,6 l4,-6 z" fill="#1e40af"/>
+    <rect x="-2" y="-20" width="4" height="10" fill="#1d4ed8" rx="1"/>
+
+    <!-- Arms -->
+    <rect x="-18" y="-26" width="8" height="22" rx="4" fill="#e5e7eb">
+      <animate attributeName="y" values="-26;-24;-26" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="10" y="-26" width="8" height="22" rx="4" fill="#e5e7eb">
+      <animate attributeName="y" values="-24;-26;-24" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Legs -->
+    <rect x="-12" y="-8" width="8" height="28" rx="4" fill="#0f172a">
+      <animate attributeName="y" values="-8;-4;-8" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="4" y="-8" width="8" height="28" rx="4" fill="#0f172a">
+      <animate attributeName="y" values="-4;-8;-4" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Head -->
+    <g transform="translate(0,-48)">
+      <!-- face -->
+      <circle cx="0" cy="0" r="12" fill="#f2e7db" stroke="#e5d8c8"/>
+      <!-- hair (short & neat) -->
+      <path d="M-12,-2 Q0,-14 12,-2 Q8,-10 -6,-10 Z" fill="#111827"/>
+      <!-- spectacles -->
+      <g stroke="#94a3b8" stroke-width="1.5" fill="none">
+        <circle cx="-4" cy="0" r="4"/><circle cx="4" cy="0" r="4"/><line x1="-0.5" y1="0" x2="0.5" y2="0"/>
+      </g>
+      <!-- headset -->
+      <path d="M-10,-2 a10,10 0 0 1 20,0" fill="none" stroke="#1e3a8a" stroke-width="2"/>
+      <rect x="10" y="-3" width="3" height="6" rx="1.5" fill="#1e3a8a"/>
+      <path d="M12,2 l10,4" stroke="#1e3a8a" stroke-width="2" />
     </g>
 
-    <!-- torso: white shirt with blue accents + tie + ID badge -->
-    <g>
-      <rect x="-10" y="-46" width="20" height="36" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
-      <rect x="-2" y="-46" width="4" height="36" fill="#3b82f6" opacity="0.9"/>
-      <polygon points="0,-46 -4,-40 4,-40" fill="#3b82f6"/>
-      <!-- ID badge -->
-      <rect x="-14" y="-26" width="10" height="12" rx="2" fill="#0f172a" stroke="#1f2937"/>
-      <rect x="-12" y="-24" width="6" height="2" fill="#22d3ee"/>
+    <!-- Watch (left wrist) -->
+    <circle cx="-14" cy="-8" r="3" fill="#1e3a8a" stroke="#93c5fd" stroke-width="1"/>
+
+    <!-- Clipboard with charts (left hand) -->
+    <g transform="translate(-26,-22)" filter="url(#cardShadow)">
+      <rect x="-8" y="-10" width="22" height="28" rx="3" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="-4" y="-12" width="14" height="4" rx="1" fill="#374151"/>
+      <rect x="-4" y="-4" width="14" height="4" fill="#22c55e"/>
+      <rect x="-4" y="2" width="10" height="3" fill="#06b6d4"/>
+      <rect x="-4" y="8" width="12" height="3" fill="#a78bfa"/>
     </g>
 
-    <!-- laptop bag (blue strap) -->
-    <g>
-      <rect x="-22" y="-30" width="14" height="12" rx="2" fill="#334155"/>
-      <path d="M-22,-30 q-8 8 -10 18" fill="none" stroke="#3b82f6" stroke-width="3"/>
-    </g>
-
-    <!-- clipboard with mini charts -->
-    <g transform="translate(14,-28)">
-      <rect x="0" y="0" width="14" height="18" rx="2" fill="#e5e7eb" stroke="#94a3b8"/>
-      <rect x="2" y="12" width="10" height="2" fill="#22c55e"/>
-      <rect x="2" y="8" width="6" height="2" fill="#06b6d4"/>
-      <rect x="2" y="4" width="8" height="2" fill="#a78bfa"/>
-      <animateTransform attributeName="transform" type="rotate" values="0 7 9; 4 7 9; 0 7 9" dur="0.6s" repeatCount="indefinite"/>
-    </g>
-
-    <!-- legs + arm swing -->
-    <g>
-      <rect x="-14" y="-10" width="6" height="28" rx="3" fill="#3b82f6">
-        <animate attributeName="y" values="-10;-6;-10" dur="0.6s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="8" y="-10" width="6" height="28" rx="3" fill="#1f2937">
-        <animate attributeName="y" values="-6;-10;-6" dur="0.6s" repeatCount="indefinite"/>
-      </rect>
-    </g>
-
-    <!-- DASHBOARD TORCH (replaces flame torch) -->
-    <g id="torch" transform="translate(24,-70)">
+    <!-- Dashboard Torch (right hand) -->
+    <g id="torch" transform="translate(22,-54)">
       <!-- handle -->
-      <rect x="-16" y="18" width="6" height="28" rx="2" fill="#8b5a2b"/>
-      <!-- mini dashboard panel -->
-      <rect x="-30" y="-8" width="60" height="26" rx="6" fill="#0b1220" stroke="url(#flameLine)" stroke-width="2" filter="url(#glow)"/>
-      <!-- tiny widgets on panel -->
-      <rect id="t1" x="-24" y="-2" width="0" height="4" rx="2" fill="#22c55e"/>
-      <rect id="t2" x="-24" y="4"  width="0" height="4" rx="2" fill="#06b6d4"/>
-      <rect id="t3" x="-24" y="10" width="0" height="4" rx="2" fill="#a78bfa"/>
-      <animate href="#t1" attributeName="width" values="0;16;14;16" dur="1.2s" repeatCount="indefinite"/>
-      <animate href="#t2" attributeName="width" values="0;22;18;22" dur="1.2s" begin="0.2s" repeatCount="indefinite"/>
-      <animate href="#t3" attributeName="width" values="0;12;10;12" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
-      <!-- gradient fusion flame glow behind panel -->
-      <path d="M0,-16 q-10,12 0,22 q10,-10 0,-22" fill="url(#flameFill)" opacity="0.75">
-        <animate attributeName="d" dur="0.8s" repeatCount="indefinite"
-                 values="M0,-16 q-10,12 0,22 q10,-10 0,-22; M0,-18 q-11,14 0,24 q11,-12 0,-24; M0,-16 q-10,12 0,22 q10,-10 0,-22"/>
-      </path>
+      <rect x="-2" y="10" width="4" height="20" rx="2" fill="#8b5a2b"/>
+      <!-- screen -->
+      <rect x="-18" y="-12" width="36" height="22" rx="4" fill="#0b1220" stroke="url(#gradDash)"/>
+      <!-- widgets -->
+      <rect x="-14" y="-8" width="8" height="6" rx="1" fill="#22c55e" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-4" y="-8" width="8" height="6" rx="1" fill="#06b6d4" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" begin="0.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="-8" width="8" height="6" rx="1" fill="#a78bfa" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" begin="0.4s" repeatCount="indefinite"/>
+      </rect>
+      <!-- flame shimmer -->
+      <g filter="url(#softGlow)">
+        <path d="M0,-20 q-8,10 0,18 q8,-8 0,-18" fill="url(#flameGlow)">
+          <animate attributeName="d" dur="0.7s" repeatCount="indefinite"
+                   values="M0,-20 q-8,10 0,18 q8,-8 0,-18; M0,-22 q-9,12 0,20 q9,-10 0,-20; M0,-20 q-8,10 0,18 q8,-8 0,-18"/>
+        </path>
+        <circle cx="0" cy="-10" r="5" fill="url(#gradFlame)" opacity="0.8">
+          <animate attributeName="r" values="5;6;5" dur="0.7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
     </g>
+
+    <!-- Sparkline trail (behind) -->
+    <path id="trail" d="M -160 -8 Q -120 -2 -80 -6 T 0 -2" fill="none" stroke="#22d3ee" stroke-width="2"
+          opacity="0.6" stroke-dasharray="100" stroke-dashoffset="100" filter="url(#softGlow)">
+      <animate attributeName="stroke-dashoffset" values="100;0" dur="0.8s" repeatCount="indefinite"/>
+    </path>
   </g>
 
-  <!-- ============== MOTION ALONG PATH ============== -->
-  <animateMotion id="runnerAnim" href="#avatar" dur="7.5s" repeatCount="indefinite" rotate="auto">
+  <!-- ======= MOTION ======= -->
+  <animateMotion id="runnerAnim" href="#avatar" dur="7s" repeatCount="indefinite" rotate="auto">
     <mpath href="#runPath"/>
   </animateMotion>
 
-  <!-- ============== BONUS EFFECTS ============== -->
-  <!-- Floating Insight Icons (A) near the end -->
-  <g id="insightIcons" opacity="0">
-    <text class="ui" x="1020" y="110" font-size="18" fill="#f59e0b">💡</text>
-    <text class="ui" x="1050" y="98" font-size="18" fill="#22d3ee">📈</text>
-    <text class="ui" x="1080" y="114" font-size="18" fill="#a78bfa">🔍</text>
-    <animate attributeName="opacity" values="0;1;0" dur="1.4s" begin="runnerAnim.begin+6.4s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" values="0,0; 0,-24; 0,-36" dur="1.4s" begin="runnerAnim.begin+6.4s" fill="freeze"/>
+  <!-- Torch proximity glow on cards (simple pulse timed to passes) -->
+  <g opacity="0.0" id="glowBars">
+    <rect x="156" y="66" width="200" height="114" rx="14" fill="url(#gradDash)" filter="url(#softGlow)"/>
+    <animate attributeName="opacity" values="0;0.55;0" dur="1s" begin="runnerAnim.begin+0.9s"/>
   </g>
-
-  <!-- Confetti Burst (B) at finish -->
-  <g id="confettiBurst" opacity="0" transform="translate(1080,84)">
-    <use href="#confetti" transform="rotate(0) translate(0,0)"/>
-    <use href="#confetti" transform="rotate(25) translate(12,-6)"/>
-    <use href="#confetti" transform="rotate(50) translate(24,-4)"/>
-    <use href="#confetti" transform="rotate(75) translate(-10,8)"/>
-    <use href="#confetti" transform="rotate(110) translate(-20,0)"/>
-    <animate attributeName="opacity" values="0;1;0" dur="1.0s" begin="runnerAnim.begin+7s"/>
-    <animateTransform attributeName="transform" type="translate" values="1080,84;1080,60" dur="1.0s" begin="runnerAnim.begin+7s" />
+  <g opacity="0.0" id="glowPie">
+    <rect x="478" y="58" width="200" height="114" rx="14" fill="url(#gradDash)" filter="url(#softGlow)"/>
+    <animate attributeName="opacity" values="0;0.55;0" dur="0.9s" begin="runnerAnim.begin+3.0s"/>
   </g>
-
-  <!-- Final Glowing Title (C) -->
-  <g id="finalTitle" opacity="0">
-    <text x="50%" y="96" text-anchor="middle" class="ui title" font-size="20" filter="url(#glow)">Unlocked Insights ✅</text>
-    <animate attributeName="opacity" values="0;1;0" dur="1.4s" begin="runnerAnim.begin+7s"/>
+  <g opacity="0.0" id="glowTiles">
+    <rect x="838" y="54" width="224" height="122" rx="16" fill="url(#gradDash)" filter="url(#softGlow)"/>
+    <animate attributeName="opacity" values="0;0.55;0" dur="0.9s" begin="runnerAnim.begin+5.0s"/>
   </g>
-
 </svg>
