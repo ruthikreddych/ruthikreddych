@@ -60,7 +60,7 @@
   <g id="chip-email" transform="translate(768,72)" filter="url(#cardShadow)">
     <rect x="0" y="-24" width="310" height="48" rx="16" fill="url(#secondary)"/>
     <rect x="0" y="-24" width="300" height="48" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="18" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio</text>
+    <text class="text" x="16" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio</text>
   </g>
 
   <!-- Gentle breathing motion to add life (y oscillation) -->
