@@ -94,7 +94,7 @@
 
     <text class="t" x="64" y="14">Python</text>
 
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#070b16"/>
     <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)" filter="url(#barShadow)"/>
     <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
       <animate attributeName="width" begin="pyGrow.end" dur="1.6s" values="690;704;690" repeatCount="indefinite"/>
@@ -120,7 +120,7 @@
 
     <text class="t" x="64" y="14">Power BI</text>
 
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#070b16"/>
     <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)" filter="url(#barShadow)"/>
     <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
       <animate attributeName="width" begin="pbiGrow.end" dur="1.6s" values="640;652;640" repeatCount="indefinite"/>
@@ -146,7 +146,7 @@
 
     <text class="t" x="64" y="14">Tableau</text>
 
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#070b16"/>
     <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
     <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
       <animate attributeName="width" begin="tbGrow.end" dur="1.6s" values="600;612;600" repeatCount="indefinite"/>
