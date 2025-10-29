@@ -25,14 +25,39 @@
     </g>
   </g>
   <!-- bar chart -->
-  <g transform="translate(568,56)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="500" height="170" rx="16" fill="#0f172a"/>
-    <g transform="translate(28,26)">
-      <rect class="bar" x="0"   y="130" width="48" height="0"><animate attributeName="height" values="0;70;64;70" dur="1.8s" fill="freeze"/></rect>
-      <rect class="bar" x="70"  y="130" width="48" height="0"><animate attributeName="height" values="0;110;100;110" dur="2s" fill="freeze"/></rect>
-      <rect class="bar" x="140" y="130" width="48" height="0"><animate attributeName="height" values="0;85;78;85" dur="2.2s" fill="freeze"/></rect>
-      <rect class="bar" x="210" y="130" width="48" height="0"><animate attributeName="height" values="0;140;126;140" dur="2.4s" fill="freeze"/></rect>
-      <rect class="bar" x="280" y="130" width="48" height="0"><animate attributeName="height" values="0;95;88;95" dur="2.6s" fill="freeze"/></rect>
-    </g>
+  <!-- bar chart (fixed upward animation) -->
+<g transform="translate(568,56)" filter="url(#cardShadow)">
+  <rect x="0" y="0" width="500" height="170" rx="16" fill="#0f172a"/>
+  <g transform="translate(28,26)">
+    
+    <!-- Bar 1 -->
+    <rect id="bar1" class="bar" x="0" y="130" width="48" height="0"/>
+    <animate href="#bar1" attributeName="y" values="130;60" dur="1.8s" fill="freeze"/>
+    <animate href="#bar1" attributeName="height" values="0;70" dur="1.8s" fill="freeze"/>
+    
+    <!-- Bar 2 -->
+    <rect id="bar2" class="bar" x="70" y="130" width="48" height="0"/>
+    <animate href="#bar2" attributeName="y" values="130;20" dur="2s" fill="freeze"/>
+    <animate href="#bar2" attributeName="height" values="0;110" dur="2s" fill="freeze"/>
+    
+    <!-- Bar 3 -->
+    <rect id="bar3" class="bar" x="140" y="130" width="48" height="0"/>
+    <animate href="#bar3" attributeName="y" values="130;45" dur="2.2s" fill="freeze"/>
+    <animate href="#bar3" attributeName="height" values="0;85" dur="2.2s" fill="freeze"/>
+    
+    <!-- Bar 4 -->
+    <rect id="bar4" class="bar" x="210" y="130" width="48" height="0"/>
+    <animate href="#bar4" attributeName="y" values="130;-10" dur="2.4s" fill="freeze"/>
+    <animate href="#bar4" attributeName="height" values="0;140" dur="2.4s" fill="freeze"/>
+    
+    <!-- Bar 5 -->
+    <rect id="bar5" class="bar" x="280" y="130" width="48" height="0"/>
+    <animate href="#bar5" attributeName="y" values="130;35" dur="2.6s" fill="freeze"/>
+    <animate href="#bar5" attributeName="height" values="0;95" dur="2.6s" fill="freeze"/>
+
   </g>
+</g>
+
 </svg>
+
+
