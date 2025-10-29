@@ -71,7 +71,7 @@
         <rect x="420" y="-14" width="120" height="28" rx="14" fill="url(#accent)"/><text class="pill" x="430" y="6">Tableau</text>
         <rect x="548" y="-14" width="150" height="28" rx="14" fill="url(#primary)"/><text class="pill" x="558" y="6">Snowflake</text>
       </g>
-      <animateTransform href="#row" attributeName="transform" type="translate" from="0 0" to="-320 0" dur="12s" repeatCount="indefinite"/>
+      <animateTransform href="#row" attributeName="transform" type="translate" from="0 0" to="-20 0" dur="12s" repeatCount="indefinite"/>
     </g>
   </g>
 </svg>
