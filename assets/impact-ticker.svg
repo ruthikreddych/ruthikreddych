@@ -1,0 +1,17 @@
+<svg viewBox="0 0 900 60" width="900" height="60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Impact ticker">
+  <defs><linearGradient id="grad" x1="0" x2="1"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs>
+  <rect x="0" y="10" width="900" height="40" rx="20" fill="#0f172a"/>
+  <g font-family="Segoe UI, Roboto, sans-serif" font-size="16" fill="#e5e7eb">
+    <text id="t1" x="30" y="36">✅ 12+ Power BI dashboards boosted client satisfaction by 18%</text>
+    <text id="t2" x="30" y="36" opacity="0">✅ SQL+Python on 15M+ txns/mo cut churn by 6.2%</text>
+    <text id="t3" x="30" y="36" opacity="0">✅ dbt/Airflow ETL → 2 TB/week with higher reporting accuracy</text>
+    <text id="t4" x="30" y="36" opacity="0">✅ Data quality checks reduced erroneous trade entries by 91%</text>
+  </g>
+  <g>
+    <animate href="#t1" attributeName="opacity" values="1;0;0;0" dur="12s" repeatCount="indefinite"/>
+    <animate href="#t2" attributeName="opacity" values="0;1;0;0" dur="12s" begin="3s" repeatCount="indefinite"/>
+    <animate href="#t3" attributeName="opacity" values="0;0;1;0" dur="12s" begin="6s" repeatCount="indefinite"/>
+    <animate href="#t4" attributeName="opacity" values="0;0;0;1" dur="12s" begin="9s" repeatCount="indefinite"/>
+  </g>
+  <rect x="10" y="12" width="4" height="36" rx="2" fill="url(#grad)"/>
+</svg>
