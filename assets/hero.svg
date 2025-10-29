@@ -2,7 +2,7 @@
   <style><![CDATA[
     .title { font: 700 34px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#e5e7eb; }
     .sub   { font: 500 18px/1.5 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#cbd5e1; }
-    .pill  { font: 600 14px/1 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#0b1020; }
+    .pill  { font: 600 14px/1 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#000; }
   ]]></style>
   <defs>
     <clipPath id="c"><circle cx="210" cy="190" r="96"/></clipPath>
