@@ -48,7 +48,7 @@
   <g id="chip-portfolio" transform="translate(40,100)" filter="url(#cardShadow)">
     <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#primary)"/>
     <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="22" y="0" dominant-baseline="middle">✉️  ruthik84@gmail.com/</text>
+    <text class="text" x="22" y="0" dominant-baseline="middle">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
   </g>
 
   <!-- Chip 2: LinkedIn -->
@@ -62,7 +62,7 @@
   <g id="chip-email" transform="translate(740,100)" filter="url(#cardShadow)">
     <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#secondary)"/>
     <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="22" y="0" dominant-baseline="middle">🌐  ruthikreddych.github.io/Ruthik-protfolio</text>
+    <text class="text" x="22" y="0" dominant-baseline="middle">✉️  ruthik84@gmail.com</text>
   </g>
 
   <!-- Gentle breathing motion (very small, keeps padding intact) -->
