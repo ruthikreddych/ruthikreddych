@@ -1,121 +1,118 @@
-<svg viewBox="0 0 1100 300" width="1100" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Core Skills Animated">
+<svg viewBox="0 0 1100 260" width="1100" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant — continuous motion">
+  <title>Core Skills — animated</title>
   <style><![CDATA[
-    .h{font:700 22px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}
-    .t{font:600 14px Segoe UI,Roboto,Arial,sans-serif;fill:#cbd5e1}
-    .p{font:700 12px Segoe UI,Roboto,Arial,sans-serif;fill:#ffffff}
+    .h{font:700 20px "Segoe UI", Roboto, Arial, sans-serif; fill:#e5e7eb}
+    .t{font:600 14px "Segoe UI", Roboto, Arial, sans-serif; fill:#cbd5e1}
   ]]></style>
 
   <defs>
-    <linearGradient id="b1" x1="0" x2="1">
+    <!-- moving gradients (gradientUnits userSpaceOnUse so gradientTransform is in user coords) -->
+    <linearGradient id="b1" gradientUnits="userSpaceOnUse" x1="0" x2="600">
       <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="100%" stop-color="#22d3ee"/>
-    </linearGradient>
-    <linearGradient id="b2" x1="0" x2="1">
-      <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
-    </linearGradient>
-    <linearGradient id="b3" x1="0" x2="1">
-      <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+      <!-- animate the gradient transform to create shimmer -->
+      <animate attributeName="gradientTransform"
+               type="translate"
+               values="-300,0;300,0;-300,0"
+               dur="2.6s"
+               repeatCount="indefinite"/>
     </linearGradient>
 
-    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <linearGradient id="b2" gradientUnits="userSpaceOnUse" x1="0" x2="600">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+      <animate attributeName="gradientTransform"
+               type="translate"
+               values="300,0;-300,0;300,0"
+               dur="3s"
+               repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="b3" gradientUnits="userSpaceOnUse" x1="0" x2="600">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+      <animate attributeName="gradientTransform"
+               type="translate"
+               values="-200,0;200,0;-200,0"
+               dur="2.2s"
+               repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- soft highlight overlay inside bars -->
+    <linearGradient id="barInner" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- subtle shadow for bars -->
+    <filter id="barShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
     </filter>
   </defs>
 
-  <rect width="1100" height="300" rx="18" fill="#070b16"/>
+  <!-- background -->
+  <rect x="0" y="0" width="1100" height="260" rx="18" fill="#070b16"/>
+
+  <!-- heading -->
   <text class="h" x="32" y="44">Core Skills</text>
 
-
-  <!-- SQL -->
-  <g transform="translate(32,80)">
-    <!-- SQL Icon -->
-    <g transform="translate(-4,3)">
-      <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
-      <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
-      <ellipse cx="18" cy="26" rx="14" ry="6" fill="#0284c7"/>
-    </g>
-    <text class="t" x="48" y="14">SQL</text>
-
+  <!-- row: SQL -->
+  <g transform="translate(32,72)" aria-hidden="false">
+    <text class="t" x="0" y="14">SQL</text>
+    <!-- track -->
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)">
-      <animate attributeName="width"
-        values="0;720;0"
-        dur="3s" begin="runnerAnim.begin+0.9s"
-        repeatCount="indefinite"
-        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-        keyTimes="0;0.5;1"/>
+    <!-- filled bar with moving gradient -->
+    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
+    <!-- inner gloss -->
+    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#barInner)" pointer-events="none">
+      <animate attributeName="width" begin="sqlGrow.end" dur="1.6s" values="720;734;720" repeatCount="indefinite"/>
     </rect>
-    <text class="p" x="820" y="16">80%</text>
+
+    <!-- initial grow -->
+    <animate id="sqlGrow" href="#sql" attributeName="width" values="0;720" dur="1.8s" fill="freeze"/>
+    <!-- subtle infinite pulse after grow -->
+    <animate href="#sql" attributeName="width" values="720;734;720" dur="3s" begin="sqlGrow.end" repeatCount="indefinite"/>
   </g>
 
-
-  <!-- Python -->
-  <g transform="translate(32,128)">
-    <!-- Python Icon -->
-    <g transform="translate(6,0)">
-      <circle cx="0" cy="10" r="8" fill="#3776ab"/>
-      <circle cx="6" cy="6" r="2" fill="#ffd43b"/>
-    </g>
-    <text class="t" x="48" y="14">Python</text>
-
+  <!-- row: Python -->
+  <g transform="translate(32,110)">
+    <text class="t" x="0" y="14">Python</text>
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)">
-      <animate attributeName="width"
-        values="0;690;0"
-        dur="3.2s" begin="runnerAnim.begin+1.4s"
-        repeatCount="indefinite"
-        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-        keyTimes="0;0.5;1"/>
+    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)" filter="url(#barShadow)"/>
+    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#barInner)" pointer-events="none">
+      <animate attributeName="width" begin="pyGrow.end" dur="1.6s" values="690;704;690" repeatCount="indefinite"/>
     </rect>
-    <text class="p" x="800" y="16">76%</text>
+
+    <animate id="pyGrow" href="#py" attributeName="width" values="0;690" dur="2s" fill="freeze"/>
+    <animate href="#py" attributeName="width" values="690;704;690" dur="3.2s" begin="pyGrow.end" repeatCount="indefinite"/>
   </g>
 
-
-  <!-- Power BI -->
-  <g transform="translate(32,176)">
-    <!-- Power BI Icon -->
-    <g transform="translate(0,2)">
-      <rect x="0" y="2" width="8" height="16" rx="2" fill="#f2c435"/>
-      <rect x="12" y="6" width="6" height="12" rx="2" fill="#f2c435"/>
-      <rect x="22" y="0" width="6" height="18" rx="2" fill="#f2c435"/>
-    </g>
-    <text class="t" x="48" y="14">Power BI</text>
-
+  <!-- row: Power BI -->
+  <g transform="translate(32,148)">
+    <text class="t" x="0" y="14">Power BI</text>
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)">
-      <animate attributeName="width"
-        values="0;640;0"
-        dur="3.4s" begin="runnerAnim.begin+1.9s"
-        repeatCount="indefinite"
-        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-        keyTimes="0;0.5;1"/>
+    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)" filter="url(#barShadow)"/>
+    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#barInner)" pointer-events="none">
+      <animate attributeName="width" begin="pbiGrow.end" dur="1.6s" values="640;652;640" repeatCount="indefinite"/>
     </rect>
-    <text class="p" x="760" y="16">72%</text>
+
+    <animate id="pbiGrow" href="#pbi" attributeName="width" values="0;640" dur="2.2s" fill="freeze"/>
+    <animate href="#pbi" attributeName="width" values="640;652;640" dur="3.1s" begin="pbiGrow.end" repeatCount="indefinite"/>
   </g>
 
-
-  <!-- Tableau -->
-  <g transform="translate(32,224)">
-    <!-- Tableau Icon -->
-    <g transform="translate(2,2)">
-      <circle cx="4" cy="8" r="2" fill="#ff8a00"/>
-      <circle cx="10" cy="8" r="2" fill="#34d399"/>
-      <circle cx="16" cy="8" r="2" fill="#3b82f6"/>
-    </g>
-    <text class="t" x="48" y="14">Tableau</text>
-
+  <!-- row: Tableau -->
+  <g transform="translate(32,186)">
+    <text class="t" x="0" y="14">Tableau</text>
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)">
-      <animate attributeName="width"
-        values="0;600;0"
-        dur="3.6s" begin="runnerAnim.begin+2.4s"
-        repeatCount="indefinite"
-        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
-        keyTimes="0;0.5;1"/>
+    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
+    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#barInner)" pointer-events="none">
+      <animate attributeName="width" begin="tbGrow.end" dur="1.6s" values="600;612;600" repeatCount="indefinite"/>
     </rect>
-    <text class="p" x="740" y="16">68%</text>
-  </g>
 
+    <animate id="tbGrow" href="#tb" attributeName="width" values="0;600" dur="2.4s" fill="freeze"/>
+    <animate href="#tb" attributeName="width" values="600;612;600" dur="3.4s" begin="tbGrow.end" repeatCount="indefinite"/>
+  </g>
 </svg>
