@@ -1,0 +1,33 @@
+<svg viewBox="0 0 980 220" width="980" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills">
+  <style><![CDATA[ .h{font:600 18px Segoe UI,Roboto,Arial,sans-serif;fill:#eaeaea}.b{fill:#0b1220}.f{fill:#22d3ee}.t{font:500 13px Segoe UI,Roboto,Arial,sans-serif;fill:#cfcfcf} ]]></style>
+  <rect x="0" y="0" width="980" height="220" fill="#0a0f1c" rx="16"/>
+  <g transform="translate(24,24)">
+    <text class="h" x="0" y="0">Core Skills</text>
+    <!-- Bars with smooth width animations -->
+    <g transform="translate(0,24)">
+      <text class="t" x="0" y="12">SQL</text>
+      <rect class="b" x="120" y="2" width="800" height="14" rx="7"/><rect id="sql" class="f" x="120" y="2" width="0" height="14" rx="7"/>
+      <animate href="#sql" attributeName="width" values="0;640;630;640" dur="2s" fill="freeze"/>
+    </g>
+    <g transform="translate(0,54)">
+      <text class="t" x="0" y="12">Python</text>
+      <rect class="b" x="120" y="2" width="800" height="14" rx="7"/><rect id="py" class="f" x="120" y="2" width="0" height="14" rx="7"/>
+      <animate href="#py" attributeName="width" values="0;620;610;620" dur="2.2s" fill="freeze"/>
+    </g>
+    <g transform="translate(0,84)">
+      <text class="t" x="0" y="12">Power BI</text>
+      <rect class="b" x="120" y="2" width="800" height="14" rx="7"/><rect id="pbi" class="f" x="120" y="2" width="0" height="14" rx="7"/>
+      <animate href="#pbi" attributeName="width" values="0;580;570;580" dur="2.4s" fill="freeze"/>
+    </g>
+    <g transform="translate(0,114)">
+      <text class="t" x="0" y="12">Tableau</text>
+      <rect class="b" x="120" y="2" width="800" height="14" rx="7"/><rect id="tb" class="f" x="120" y="2" width="0" height="14" rx="7"/>
+      <animate href="#tb" attributeName="width" values="0;560;550;560" dur="2.6s" fill="freeze"/>
+    </g>
+    <g transform="translate(0,144)">
+      <text class="t" x="0" y="12">dbt / Airflow</text>
+      <rect class="b" x="120" y="2" width="800" height="14" rx="7"/><rect id="pl" class="f" x="120" y="2" width="0" height="14" rx="7"/>
+      <animate href="#pl" attributeName="width" values="0;520;510;520" dur="2.8s" fill="freeze"/>
+    </g>
+  </g>
+</svg>

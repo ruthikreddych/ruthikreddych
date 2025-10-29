@@ -1,0 +1,14 @@
+<svg viewBox="0 0 980 70" width="980" height="70" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Impact">
+  <style><![CDATA[ .txt{font:16px/1.2 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;fill:#e5e7eb} ]]></style>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#a78bfa"/></linearGradient></defs>
+  <rect x="0" y="12" width="980" height="46" rx="20" fill="#0f172a"/>
+  <text id="t1" class="txt" x="30" y="40">✅ 12+ Power BI dashboards boosted client satisfaction by 18%</text>
+  <text id="t2" class="txt" x="30" y="40" opacity="0">✅ SQL+Python on 15M+ txns/mo cut churn by 6.2%</text>
+  <text id="t3" class="txt" x="30" y="40" opacity="0">✅ dbt/Airflow ETL → 2 TB/week with higher reporting accuracy</text>
+  <text id="t4" class="txt" x="30" y="40" opacity="0">✅ Data quality checks reduced erroneous trade entries by 91%</text>
+  <animate href="#t1" attributeName="opacity" values="1;0;0;0" dur="12s" repeatCount="indefinite"/>
+  <animate href="#t2" attributeName="opacity" values="0;1;0;0" begin="3s" dur="12s" repeatCount="indefinite"/>
+  <animate href="#t3" attributeName="opacity" values="0;0;1;0" begin="6s" dur="12s" repeatCount="indefinite"/>
+  <animate href="#t4" attributeName="opacity" values="0;0;0;1" begin="9s" dur="12s" repeatCount="indefinite"/>
+  <rect x="10" y="14" width="4" height="42" rx="2" fill="url(#g)"/>
+</svg>

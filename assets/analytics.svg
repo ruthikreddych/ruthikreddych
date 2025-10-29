@@ -1,0 +1,29 @@
+<svg viewBox="0 0 980 220" width="980" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Analytics">
+  <style><![CDATA[ .t{font:600 16px Segoe UI,Roboto,Arial,sans-serif;fill:#eaeaea}.a{fill:none;stroke:#22d3ee;stroke-width:3}.grid{stroke:#1f2937;stroke-width:1}.bar{fill:#a78bfa} ]]></style>
+  <rect x="0" y="0" width="980" height="220" fill="#0a0f1c" rx="16"/>
+  <text class="t" x="24" y="30">Mini Analytics</text>
+  <!-- line chart -->
+  <g transform="translate(24,40)">
+    <rect x="0" y="0" width="440" height="150" rx="12" fill="#0f172a"/>
+    <g transform="translate(20,20)">
+      <path class="grid" d="M0,0 H380 M0,35 H380 M0,70 H380 M0,105 H380" fill="none"/>
+      <path id="line" class="a" d="M0,110 Q60,90 120,80 T240,60 T360,40"/>
+      <animate attributeName="d" dur="2.5s" repeatCount="indefinite"
+        values="M0,110 Q60,110 120,110 T240,110 T360,110;
+                M0,110 Q60,90 120,80 T240,60 T360,40;
+                M0,110 Q60,100 120,95 T240,75 T360,55;
+                M0,110 Q60,90 120,80 T240,60 T360,40"/>
+    </g>
+  </g>
+  <!-- bar chart -->
+  <g transform="translate(512,40)">
+    <rect x="0" y="0" width="444" height="150" rx="12" fill="#0f172a"/>
+    <g transform="translate(24,18)">
+      <rect class="bar" x="0"   y="120" width="40" height="0"><animate attributeName="height" values="0;60;55;60" dur="1.8s" fill="freeze"/></rect>
+      <rect class="bar" x="60"  y="120" width="40" height="0"><animate attributeName="height" values="0;90;85;90" dur="2s" fill="freeze"/></rect>
+      <rect class="bar" x="120" y="120" width="40" height="0"><animate attributeName="height" values="0;70;65;70" dur="2.2s" fill="freeze"/></rect>
+      <rect class="bar" x="180" y="120" width="40" height="0"><animate attributeName="height" values="0;110;100;110" dur="2.4s" fill="freeze"/></rect>
+      <rect class="bar" x="240" y="120" width="40" height="0"><animate attributeName="height" values="0;80;75;80" dur="2.6s" fill="freeze"/></rect>
+    </g>
+  </g>
+</svg>
