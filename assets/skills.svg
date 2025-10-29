@@ -1,157 +1,62 @@
-<svg viewBox="0 0 1100 260" width="1100" height="260"
-     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant — with inserted logos from code1">
-  <title>Core Skills — animated with inserted logos</title>
-  <style><![CDATA[
-    .h{font:700 20px "Segoe UI", Roboto, Arial, sans-serif; fill:#e5e7eb}
-    .t{font:600 14px "Segoe UI", Roboto, Arial, sans-serif; fill:#cbd5e1}
-    .icon-label { pointer-events: none; }
-  ]]></style>
+<svg viewBox="0 0 1100 300" width="1100" height="300"
+     xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Core Skills — corrected logo sizing & spacing</title>
 
-  <defs>
-    <!-- moving gradients -->
-    <linearGradient id="b1" gradientUnits="userSpaceOnUse" x1="0" x2="600">
-      <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="50%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-      <animate attributeName="gradientTransform" type="translate" values="-300,0;300,0;-300,0" dur="2.6s" repeatCount="indefinite"/>
-    </linearGradient>
+  <style>
+    .h{font:700 20px "Segoe UI",sans-serif;fill:#e5e7eb}
+    .t{font:600 14px "Segoe UI",sans-serif;fill:#cbd5e1}
+    .badge{width:42px;height:42px;rx:10}
+  </style>
 
-    <linearGradient id="b2" gradientUnits="userSpaceOnUse" x1="0" x2="600">
-      <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
-      <animate attributeName="gradientTransform" type="translate" values="300,0;-300,0;300,0" dur="3s" repeatCount="indefinite"/>
-    </linearGradient>
+  <!-- Background -->
+  <rect width="1100" height="300" rx="18" fill="#070b16"/>
 
-    <linearGradient id="b3" gradientUnits="userSpaceOnUse" x1="0" x2="600">
-      <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="50%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#f43f5e"/>
-      <animate attributeName="gradientTransform" type="translate" values="-200,0;200,0;-200,0" dur="2.2s" repeatCount="indefinite"/>
-    </linearGradient>
+  <text class="h" x="32" y="50">Core Skills</text>
 
-    <linearGradient id="gInner" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#000000" stop-opacity="0.03"/>
-    </linearGradient>
-
-    <filter id="barShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
-    </filter>
-
-    <clipPath id="clipCard"><rect x="0" y="-22" width="640" height="44" rx="22"/></clipPath>
-
-    <!-- neutral badge background so official marks sit on a consistent patch -->
-    <linearGradient id="badgeBg" x1="0" x2="1">
-      <stop offset="0" stop-color="#111827"/>
-      <stop offset="1" stop-color="#0b1220"/>
-    </linearGradient>
-  </defs>
-
-  <!-- background -->
-  <rect x="0" y="0" width="1100" height="260" rx="18" fill="#070b16"/>
-
-  <!-- heading -->
-  <text class="h" x="32" y="44">Core Skills</text>
-
-  <!-- ROW 1: SQL Server (inserted from code1) -->
-  <g transform="translate(32,72)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-15" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
-      <!-- INSERTED: SQL icon from code1 (scaled to fit badge) -->
-      <g id="logo-sql-official" transform="translate(0,0) translate(6,6) scale(0.9)">
-        <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
-        <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
-        <ellipse cx="18" cy="26" rx="14" ry="6" fill="#0284c7"/>
-      </g>
+  <!-- SQL Server -->
+  <g transform="translate(32,90)">
+    <rect class="badge" fill="#070b16"/>
+    <g transform="translate(5,7) scale(0.95)">
+      <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
+      <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
+      <ellipse cx="18" cy="26" rx="14" ry="6" fill="#0284c7"/>
     </g>
-
-    <text class="t" x="54" y="14">SQL Server</text>
-
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="sqlGrow.end" dur="1.6s" values="720;734;720" repeatCount="indefinite"/>
-    </rect>
-
-    <animate id="sqlGrow" href="#sql" attributeName="width" values="0;720" dur="1.8s" fill="freeze"/>
-    <animate href="#sql" attributeName="width" values="720;734;720" dur="3s" begin="sqlGrow.end" repeatCount="indefinite"/>
+    <text class="t" x="60" y="16">SQL Server</text>
+    <rect x="170" y="0" width="720" height="20" rx="10" fill="url(#sql)"/>
   </g>
 
-  <!-- ROW 2: Python (inserted from code1) -->
-  <g transform="translate(32,110)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
-      <!-- INSERTED: Python icon from code1 -->
-      <g id="logo-python-official" transform="translate(0,0) translate(6,6) scale(0.9)">
-        <g transform="translate(6,0)">
-          <circle cx="0" cy="10" r="8" fill="#3776ab"/>
-          <circle cx="6" cy="6" r="2" fill="#ffd43b"/>
-        </g>
-      </g>
+  <!-- Python -->
+  <g transform="translate(32,140)">
+    <rect class="badge" fill="#070b16"/>
+    <g transform="translate(9,7) scale(0.95)">
+      <circle cx="0" cy="10" r="8" fill="#3776ab"/>
+      <circle cx="6" cy="6" r="3" fill="#ffd43b"/>
     </g>
-
-    <text class="t" x="54" y="14">Python</text>
-
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="pyGrow.end" dur="1.6s" values="690;704;690" repeatCount="indefinite"/>
-    </rect>
-
-    <animate id="pyGrow" href="#py" attributeName="width" values="0;690" dur="2s" fill="freeze"/>
-    <animate href="#py" attributeName="width" values="690;704;690" dur="3.2s" begin="pyGrow.end" repeatCount="indefinite"/>
+    <text class="t" x="60" y="16">Python</text>
+    <rect x="170" y="0" width="690" height="20" rx="10" fill="#8b5cf6"/>
   </g>
 
-  <!-- ROW 3: Power BI (inserted from code1) -->
-  <g transform="translate(32,148)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
-      <!-- INSERTED: Power BI icon from code1 -->
-      <g id="logo-powerbi-official" transform="translate(0,0) translate(6,6) scale(0.9)">
-        <g transform="translate(0,2)">
-          <rect x="0" y="2" width="8" height="16" rx="2" fill="#f2c435"/>
-          <rect x="12" y="6" width="6" height="12" rx="2" fill="#f2c435"/>
-          <rect x="22" y="0" width="6" height="18" rx="2" fill="#f2c435"/>
-        </g>
-      </g>
+  <!-- Power BI -->
+  <g transform="translate(32,190)">
+    <rect class="badge" fill="#111827"/>
+    <g transform="translate(8,7) scale(0.95)">
+      <rect x="0" y="2" width="8" height="16" rx="2" fill="#f2c435"/>
+      <rect x="12" y="6" width="6" height="12" rx="2" fill="#f2c435"/>
+      <rect x="22" y="0" width="6" height="18" rx="2" fill="#f2c435"/>
     </g>
-
-    <text class="t" x="54" y="14">Power BI</text>
-
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="pbiGrow.end" dur="1.6s" values="640;652;640" repeatCount="indefinite"/>
-    </rect>
-
-    <animate id="pbiGrow" href="#pbi" attributeName="width" values="0;640" dur="2.2s" fill="freeze"/>
-    <animate href="#pbi" attributeName="width" values="640;652;640" dur="3.1s" begin="pbiGrow.end" repeatCount="indefinite"/>
+    <text class="t" x="60" y="16">Power BI</text>
+    <rect x="170" y="0" width="640" height="20" rx="10" fill="#f59e0b"/>
   </g>
 
-  <!-- ROW 4: Tableau (inserted from code1) -->
-  <g transform="translate(32,186)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
-      <!-- INSERTED: Tableau icon from code1 -->
-      <g id="logo-tableau-official" transform="translate(0,0) translate(4,4) scale(0.9)">
-        <g transform="translate(2,2)">
-          <circle cx="4" cy="8" r="2" fill="#ff8a00"/>
-          <circle cx="10" cy="8" r="2" fill="#34d399"/>
-          <circle cx="16" cy="8" r="2" fill="#3b82f6"/>
-        </g>
-      </g>
+  <!-- Tableau -->
+  <g transform="translate(32,240)">
+    <rect class="badge" fill="#111827"/>
+    <g transform="translate(8,7) scale(0.95)">
+      <circle cx="4" cy="8" r="3" fill="#ff8a00"/>
+      <circle cx="10" cy="8" r="3" fill="#34d399"/>
+      <circle cx="16" cy="8" r="3" fill="#3b82f6"/>
     </g>
-
-    <text class="t" x="48" y="14">Tableau</text>
-
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="tbGrow.end" dur="1.6s" values="600;612;600" repeatCount="indefinite"/>
-    </rect>
-
-    <animate id="tbGrow" href="#tb" attributeName="width" values="0;600" dur="2.4s" fill="freeze"/>
-    <animate href="#tb" attributeName="width" values="600;612;600" dur="3.4s" begin="tbGrow.end" repeatCount="indefinite"/>
+    <text class="t" x="60" y="16">Tableau</text>
+    <rect x="170" y="0" width="600" height="20" rx="10" fill="#06b6d4"/>
   </g>
 </svg>
