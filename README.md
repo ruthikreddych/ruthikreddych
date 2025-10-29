@@ -1,6 +1,6 @@
 # Hi, I’m **Ruthik Reddy** 👋
 
-<p align="center"><img src="./assets/hero.svg" width="980" alt="Hero animation"/></p>
+<p align="center"><img src="assets/hero.svg" width="980" alt="Hero animation"/></p>
 
 <p align="center">
   <a href="https://github.com/ruthikreddych?tab=followers"><img src="https://img.shields.io/github/followers/ruthikreddych?style=for-the-badge" alt="Followers"></a>
@@ -10,14 +10,14 @@
 
 ---
 
-<p align="center"><img src="./assets/ticker.svg" width="980" alt="Impact highlights"/></p>
+<p align="center"><img src="assets/ticker.svg" width="980" alt="Impact highlights"/></p>
 
-<p align="center"><img src="./assets/skills.svg" width="980" alt="Skills"/></p>
+<p align="center"><img src="assets/skills.svg" width="980" alt="Skills"/></p>
 
-<p align="center"><img src="./assets/projects.svg" width="980" alt="Projects"/></p>
+<p align="center"><img src="assets/projects.svg" width="980" alt="Projects"/></p>
 
-<p align="center"><img src="./assets/analytics.svg" width="980" alt="Analytics"/></p>
+<p align="center"><img src="assets/analytics.svg" width="980" alt="Analytics"/></p>
 
-<p align="center"><img src="./assets/torch-bearer.svg" width="900" alt="Torch bearer"/></p>
+<p align="center"><img src="assets/torch-bearer.svg" width="900" alt="Torch bearer"/></p>
 
-<p align="center"><img src="./assets/contact.svg" width="980" alt="Contact"/></p>
+<p align="center"><img src="assets/contact.svg" width="980" alt="Contact"/></p>
