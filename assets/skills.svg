@@ -1,6 +1,6 @@
-<svg viewBox="0 0 1100 260" width="1100" height="260"
-     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant — with increased gap">
-  <title>Core Skills — increased gap between logos and labels</title>
+<svg viewBox="0 0 1100 320" width="1100" height="320"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant — increased vertical gaps">
+  <title>Core Skills — increased vertical gaps between rows</title>
   <style><![CDATA[
     .h{font:700 20px "Segoe UI", Roboto, Arial, sans-serif; fill:#e5e7eb}
     .t{font:600 14px "Segoe UI", Roboto, Arial, sans-serif; fill:#cbd5e1}
@@ -49,7 +49,7 @@
   </defs>
 
   <!-- background -->
-  <rect x="0" y="0" width="1100" height="260" rx="18" fill="#070b16"/>
+  <rect x="0" y="0" width="1100" height="320" rx="18" fill="#070b16"/>
 
   <!-- heading -->
   <text class="h" x="32" y="44">Core Skills</text>
@@ -66,10 +66,10 @@
       </g>
     </g>
 
-    <!-- increased gap: moved label from x=48 to x=64 -->
+    <!-- increased horizontal gap already applied earlier; keep label further right -->
     <text class="t" x="64" y="14">SQL Server</text>
 
-    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#070b16"/>
     <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
     <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
       <animate attributeName="width" begin="sqlGrow.end" dur="1.6s" values="720;734;720" repeatCount="indefinite"/>
@@ -79,8 +79,8 @@
     <animate href="#sql" attributeName="width" values="720;734;720" dur="3s" begin="sqlGrow.end" repeatCount="indefinite"/>
   </g>
 
-  <!-- ROW 2: Python (inserted from code1) -->
-  <g transform="translate(32,110)">
+  <!-- ROW 2: Python (moved down for larger vertical gap) -->
+  <g transform="translate(32,124)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
       <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: Python icon from code1 -->
@@ -92,7 +92,6 @@
       </g>
     </g>
 
-    <!-- increased gap -->
     <text class="t" x="64" y="14">Python</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
@@ -105,8 +104,8 @@
     <animate href="#py" attributeName="width" values="690;704;690" dur="3.2s" begin="pyGrow.end" repeatCount="indefinite"/>
   </g>
 
-  <!-- ROW 3: Power BI (inserted from code1) -->
-  <g transform="translate(32,148)">
+  <!-- ROW 3: Power BI (moved down for larger vertical gap) -->
+  <g transform="translate(32,176)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
       <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: Power BI icon from code1 -->
@@ -119,7 +118,6 @@
       </g>
     </g>
 
-    <!-- increased gap -->
     <text class="t" x="64" y="14">Power BI</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
@@ -132,8 +130,8 @@
     <animate href="#pbi" attributeName="width" values="640;652;640" dur="3.1s" begin="pbiGrow.end" repeatCount="indefinite"/>
   </g>
 
-  <!-- ROW 4: Tableau (inserted from code1) -->
-  <g transform="translate(32,186)">
+  <!-- ROW 4: Tableau (moved down for larger vertical gap) -->
+  <g transform="translate(32,228)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
       <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: Tableau icon from code1 -->
@@ -146,7 +144,6 @@
       </g>
     </g>
 
-    <!-- increased gap -->
     <text class="t" x="64" y="14">Tableau</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
