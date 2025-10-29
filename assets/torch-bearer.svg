@@ -208,13 +208,7 @@
       </rect>
       <!-- flame shimmer -->
 
-
-    <!-- Sparkline trail (behind) -->
-    <path id="trail" d="M -160 -8 Q -120 -2 -80 -6 T 0 -2" fill="none" stroke="#22d3ee" stroke-width="2"
-          opacity="0.6" stroke-dasharray="100" stroke-dashoffset="100" filter="url(#softGlow)">
-      <animate attributeName="stroke-dashoffset" values="100;0" dur="0.8s" repeatCount="indefinite"/>
-    </path>
-  </g>
+ 
 
   <!-- ======= MOTION ======= -->
   <animateMotion id="runnerAnim" href="#avatar" dur="7s" repeatCount="indefinite" rotate="auto">
