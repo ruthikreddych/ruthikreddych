@@ -10,30 +10,23 @@
     <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.28"/>
     </filter>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <rect x="0" y="0" width="1100" height="260" fill="#070b16" rx="18"/>
   <text class="t" x="32" y="40">Mini Analytics</text>
 
-  <!-- ============ LINE CHART (fixed) ============ -->
+  <!-- ============ LINE CHART (robust draw-on animation) ============ -->
   <g transform="translate(32,56)" filter="url(#cardShadow)">
     <rect x="0" y="0" width="500" height="170" rx="16" fill="#0f172a"/>
     <g transform="translate(24,24)">
       <path class="grid" d="M0,0 H452 M0,40 H452 M0,80 H452 M0,120 H452" fill="none"/>
-      <!-- Animate the path itself (not a sibling) -->
-      <path id="line" class="a" d="M0,120 Q80,120 160,120 T320,120 T440,120">
-        <animate attributeName="d" begin="0s" dur="2.2s" fill="freeze"
-          keyTimes="0;0.65;0.85;1"
-          keySplines="0.33 0.0 0.67 1.0; 0.25 0.5 0.7 1.4; 0.33 0.0 0.67 1.0" calcMode="spline"
-          values="
-            M0,120 Q80,120 160,120 T320,120 T440,120;
-            M0,120 Q80,95 160,88 T320,66 T440,44;
-            M0,120 Q80,105 160,96 T320,78 T440,56;
-            M0,120 Q80,95 160,88 T320,66 T440,44"/>
+      <!-- Final shape only; animate stroke drawing instead of 'd' -->
+      <path id="line" class="a"
+            d="M0,120 Q80,95 160,88 T320,66 T440,44"
+            vector-effect="non-scaling-stroke"
+            stroke-linecap="round" stroke-linejoin="round"
+            stroke-dasharray="600" stroke-dashoffset="600">
+        <animate attributeName="stroke-dashoffset" from="600" to="0" dur="2.2s" begin="0s" fill="freeze"/>
       </path>
     </g>
   </g>
@@ -46,28 +39,28 @@
 
       <!-- Bar 1 -->
       <rect id="bar1" class="bar" x="0" y="130" width="48" height="0"/>
-      <animate href="#bar1" attributeName="y" values="130;80" dur="1.4s" fill="freeze"/>
-      <animate href="#bar1" attributeName="height" values="0;50" dur="1.4s" fill="freeze"/>
+      <animate href="#bar1" attributeName="y" values="130;80" dur="1.4s" begin="0s" fill="freeze"/>
+      <animate href="#bar1" attributeName="height" values="0;50" dur="1.4s" begin="0s" fill="freeze"/>
 
       <!-- Bar 2 -->
       <rect id="bar2" class="bar" x="70" y="130" width="48" height="0"/>
-      <animate href="#bar2" attributeName="y" values="130;50" dur="1.6s" fill="freeze"/>
-      <animate href="#bar2" attributeName="height" values="0;80" dur="1.6s" fill="freeze"/>
+      <animate href="#bar2" attributeName="y" values="130;50" dur="1.6s" begin="0s" fill="freeze"/>
+      <animate href="#bar2" attributeName="height" values="0;80" dur="1.6s" begin="0s" fill="freeze"/>
 
       <!-- Bar 3 -->
       <rect id="bar3" class="bar" x="140" y="130" width="48" height="0"/>
-      <animate href="#bar3" attributeName="y" values="130;70" dur="1.8s" fill="freeze"/>
-      <animate href="#bar3" attributeName="height" values="0;60" dur="1.8s" fill="freeze"/>
+      <animate href="#bar3" attributeName="y" values="130;70" dur="1.8s" begin="0s" fill="freeze"/>
+      <animate href="#bar3" attributeName="height" values="0;60" dur="1.8s" begin="0s" fill="freeze"/>
 
       <!-- Bar 4 (tallest) -->
       <rect id="bar4" class="bar" x="210" y="130" width="48" height="0"/>
-      <animate href="#bar4" attributeName="y" values="130;30" dur="2s" fill="freeze"/>
-      <animate href="#bar4" attributeName="height" values="0;100" dur="2s" fill="freeze"/>
+      <animate href="#bar4" attributeName="y" values="130;30" dur="2s" begin="0s" fill="freeze"/>
+      <animate href="#bar4" attributeName="height" values="0;100" dur="2s" begin="0s" fill="freeze"/>
 
       <!-- Bar 5 -->
       <rect id="bar5" class="bar" x="280" y="130" width="48" height="0"/>
-      <animate href="#bar5" attributeName="y" values="130;65" dur="2.2s" fill="freeze"/>
-      <animate href="#bar5" attributeName="height" values="0;65" dur="2.2s" fill="freeze"/>
+      <animate href="#bar5" attributeName="y" values="130;65" dur="2.2s" begin="0s" fill="freeze"/>
+      <animate href="#bar5" attributeName="height" values="0;65" dur="2.2s" begin="0s" fill="freeze"/>
     </g>
   </g>
 </svg>
