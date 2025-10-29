@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1100 140" width="1100" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact – Vibrant">
   <style><![CDATA[
-    .title { font: 700 20px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#e5e7eb }
+    .title { font: 700 20px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#000 }
     .text  { font: 600 15px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#ffffff }
   ]]></style>
 
