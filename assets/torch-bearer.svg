@@ -195,7 +195,7 @@
       <!-- handle -->
       <rect x="-2" y="10" width="4" height="20" rx="2" fill="#8b5a2b"/>
       <!-- screen -->
-      <rect x="-18" y="-12" width="36" height="22" rx="4" fill="#0b1220" stroke="url(#gradDash)"/>
+      <rect x="-18" y="-12" width="36" height="22" rx="4" fill="#000" stroke="url(#gradDash)"/>
       <!-- widgets -->
       <rect x="-14" y="-8" width="8" height="6" rx="1" fill="#22c55e" opacity="0.6">
         <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" repeatCount="indefinite"/>
