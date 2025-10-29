@@ -52,7 +52,7 @@
   <!-- ======= CHECKPOINT CARDS (activate as avatar passes) ======= -->
   <!-- Bars Card -->
   <g id="cardBars" transform="translate(240,78)" filter="url(#cardShadow)">
-    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#000"/>
+    <rect x="-80" y="-10" width="180" height="90" rx="10" fill="#0f172a"/>
     <text x="-64" y="-2" class="small">KPIs</text>
     <g transform="translate(-64,8)">
       <rect x="0" y="52" width="24" height="0" fill="#22c55e" rx="4">
@@ -143,7 +143,7 @@
     <!-- Body -->
     <rect x="-10" y="-36" width="20" height="40" rx="6" fill="#ffffff" stroke="#e5e7eb"/>
     <!-- Blue tie -->
-    <path d="M0,-36 l-4,8 l4,6 l4,-6 z" fill="#1e40af"/>
+    <path d="M0,-36 l-4,8 l4,6 l4,-6 z" fill="#000"/>
     <rect x="-2" y="-20" width="4" height="10" fill="#1d4ed8" rx="1"/>
 
     <!-- Arms -->
