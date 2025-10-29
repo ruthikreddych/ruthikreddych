@@ -1,0 +1,38 @@
+<svg viewBox="0 0 1100 320" width="1100" height="320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Projects Vibrant">
+  <style><![CDATA[ .title{font:700 20px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}.t{font:600 14px Segoe UI,Roboto,Arial,sans-serif;fill:#cbd5e1} ]]></style>
+  <defs>
+    <linearGradient id="cardGrad" x1="0" x2="1"><stop offset="0%" stop-color="#121a2b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+    {shadow_defs}
+  </defs>
+  <rect x="0" y="0" width="1100" height="320" fill="#070b16" rx="18"/>
+  <text class="title" x="32" y="44">Featured Projects</text>
+
+  <g id="c1" transform="translate(32,72)" opacity="1" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="500" height="200" rx="18" fill="url(#cardGrad)"/>
+    <text class="title" x="18" y="42">Financial Advisory KPIs (Power BI)</text>
+    <text class="t" x="18" y="72">Interactive dashboards for portfolio performance &amp; churn.</text>
+  </g>
+
+  <g id="c2" transform="translate(568,72)" opacity="0" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="500" height="200" rx="18" fill="url(#cardGrad)"/>
+    <text class="title" x="18" y="42">Healthcare Claims Insights</text>
+    <text class="t" x="18" y="72">Streamlit + SQL + readmission modelling (82% accuracy).</text>
+  </g>
+
+  <g id="c3" transform="translate(32,72)" opacity="0" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="500" height="200" rx="18" fill="url(#cardGrad)"/>
+    <text class="title" x="18" y="42">ETL on Snowflake</text>
+    <text class="t" x="18" y="72">dbt + Airflow pipelines (2 TB/week) with DQ checks.</text>
+  </g>
+
+  <g id="c4" transform="translate(568,72)" opacity="0" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="500" height="200" rx="18" fill="url(#cardGrad)"/>
+    <text class="title" x="18" y="42">Pneumonia Detection (VGG16/19)</text>
+    <text class="t" x="18" y="72">94% accuracy on pediatric X-rays; regularization pipeline.</text>
+  </g>
+
+  <animate href="#c1" attributeName="opacity" values="1;0;0;0" dur="16s" repeatCount="indefinite"/>
+  <animate href="#c2" attributeName="opacity" values="0;1;0;0" begin="4s" dur="16s" repeatCount="indefinite"/>
+  <animate href="#c3" attributeName="opacity" values="0;0;1;0" begin="8s" dur="16s" repeatCount="indefinite"/>
+  <animate href="#c4" attributeName="opacity" values="0;0;0;1" begin="12s" dur="16s" repeatCount="indefinite"/>
+</svg>

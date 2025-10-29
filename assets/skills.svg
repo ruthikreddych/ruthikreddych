@@ -1,0 +1,35 @@
+<svg viewBox="0 0 1100 260" width="1100" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant">
+  <style><![CDATA[ .h{font:700 20px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}.t{font:600 14px Segoe UI,Roboto,Arial,sans-serif;fill:#cbd5e1} ]]></style>
+  <defs>
+    <linearGradient id="b1" x1="0" x2="1"><stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient>
+    <linearGradient id="b2" x1="0" x2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#8b5cf6"/></linearGradient>
+    <linearGradient id="b3" x1="0" x2="1"><stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1100" height="260" fill="#070b16" rx="18"/>
+  <text class="h" x="32" y="44">Core Skills</text>
+  <!-- Row template: label left, background bar, animated foreground bar -->
+  <g transform="translate(32,72)">
+    <text class="t" x="0" y="14">SQL</text>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)"/>
+    <animate href="#sql" attributeName="width" values="0;720" dur="1.8s" fill="freeze"/>
+  </g>
+  <g transform="translate(32,110)">
+    <text class="t" x="0" y="14">Python</text>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)"/>
+    <animate href="#py" attributeName="width" values="0;690" dur="2s" fill="freeze"/>
+  </g>
+  <g transform="translate(32,148)">
+    <text class="t" x="0" y="14">Power BI</text>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)"/>
+    <animate href="#pbi" attributeName="width" values="0;640" dur="2.2s" fill="freeze"/>
+  </g>
+  <g transform="translate(32,186)">
+    <text class="t" x="0" y="14">Tableau</text>
+    <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
+    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)"/>
+    <animate href="#tb" attributeName="width" values="0;600" dur="2.4s" fill="freeze"/>
+  </g>
+</svg>

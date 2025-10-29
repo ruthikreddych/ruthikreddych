@@ -1,0 +1,21 @@
+<svg viewBox="0 0 1100 140" width="1100" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact Vibrant">
+  <style><![CDATA[ .t{font:700 20px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}.s{font:600 15px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb} ]]></style>
+  <defs>{palette_defs}{shadow_defs}</defs>
+  <rect x="0" y="0" width="1100" height="140" fill="#070b16" rx="18"/>
+  <text class="t" x="32" y="46">Contact</text>
+  <g id="email" transform="translate(32,78)" filter="url(#cardShadow)">
+    <rect x="0" y="-22" width="430" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
+    <text class="s" x="18" y="6">✉️  ಕ್ರ ruthik84@gmail.com</text>
+  </g>
+  <g id="li" transform="translate(480,78)" filter="url(#cardShadow)">
+    <rect x="0" y="-22" width="300" height="44" rx="14" fill="#0f172a" stroke="url(#accent)"/>
+    <text class="s" x="18" y="6">🔗  linkedin.com/in/ruthikreddy-cheruku/</text>
+  </g>
+  <g id="pf" transform="translate(800,78)" filter="url(#cardShadow)">
+    <rect x="0" y="-22" width="268" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
+    <text class="s" x="18" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
+  </g>
+  <animateTransform href="#email" attributeName="transform" type="translate" values="32,78;28,78;32,78" dur="1.6s" repeatCount="indefinite"/>
+  <animateTransform href="#li" attributeName="transform" type="translate" values="480,78;484,78;480,78" dur="1.8s" repeatCount="indefinite"/>
+  <animateTransform href="#pf" attributeName="transform" type="translate" values="800,78;796,78;800,78" dur="2s" repeatCount="indefinite"/>
+</svg>
