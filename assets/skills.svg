@@ -107,7 +107,7 @@
   <!-- ROW 3: Power BI (moved down for larger vertical gap) -->
   <g transform="translate(32,176)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
+      
       <!-- INSERTED: Power BI icon from code1 -->
       <g id="logo-powerbi-official" transform="translate(4,4) scale(0.9)">
         <g transform="translate(0,2)">
@@ -133,7 +133,7 @@
   <!-- ROW 4: Tableau (moved down for larger vertical gap) -->
   <g transform="translate(32,228)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
+      
       <!-- INSERTED: Tableau icon from code1 -->
       <g id="logo-tableau-official" transform="translate(4,4) scale(0.9)">
         <g transform="translate(2,2)">
