@@ -57,16 +57,16 @@
   <!-- ROW 1: SQL Server (inserted from code1) -->
   <g transform="translate(32,72)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="26" height="26" rx="9" fill="url(#badgeBg)"/>
+      <rect x="0" y="-15" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: SQL icon from code1 (scaled to fit badge) -->
-      <g id="logo-sql-official" transform="translate(0,0) translate(4,4) scale(0.9)">
+      <g id="logo-sql-official" transform="translate(0,0) translate(6,6) scale(0.9)">
         <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
         <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
         <ellipse cx="18" cy="26" rx="14" ry="6" fill="#0284c7"/>
       </g>
     </g>
 
-    <text class="t" x="48" y="14">SQL Server</text>
+    <text class="t" x="54" y="14">SQL Server</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
     <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
@@ -81,9 +81,9 @@
   <!-- ROW 2: Python (inserted from code1) -->
   <g transform="translate(32,110)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
+      <rect x="0" y="-12" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: Python icon from code1 -->
-      <g id="logo-python-official" transform="translate(0,0) translate(4,4) scale(0.9)">
+      <g id="logo-python-official" transform="translate(0,0) translate(6,6) scale(0.9)">
         <g transform="translate(6,0)">
           <circle cx="0" cy="10" r="8" fill="#3776ab"/>
           <circle cx="6" cy="6" r="2" fill="#ffd43b"/>
@@ -91,7 +91,7 @@
       </g>
     </g>
 
-    <text class="t" x="48" y="14">Python</text>
+    <text class="t" x="54" y="14">Python</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
     <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)" filter="url(#barShadow)"/>
@@ -106,9 +106,9 @@
   <!-- ROW 3: Power BI (inserted from code1) -->
   <g transform="translate(32,148)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
+      <rect x="0" y="-12" width="42" height="42" rx="9" fill="url(#badgeBg)"/>
       <!-- INSERTED: Power BI icon from code1 -->
-      <g id="logo-powerbi-official" transform="translate(0,0) translate(4,4) scale(0.9)">
+      <g id="logo-powerbi-official" transform="translate(0,0) translate(6,6) scale(0.9)">
         <g transform="translate(0,2)">
           <rect x="0" y="2" width="8" height="16" rx="2" fill="#f2c435"/>
           <rect x="12" y="6" width="6" height="12" rx="2" fill="#f2c435"/>
@@ -117,7 +117,7 @@
       </g>
     </g>
 
-    <text class="t" x="48" y="14">Power BI</text>
+    <text class="t" x="54" y="14">Power BI</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
     <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)" filter="url(#barShadow)"/>
