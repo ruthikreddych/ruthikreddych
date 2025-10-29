@@ -195,7 +195,7 @@
       <!-- handle -->
       <rect x="-2" y="10" width="4" height="20" rx="2" fill="#8b5a2b"/>
       <!-- screen -->
-      <rect x="-18" y="-12" width="36" height="22" rx="4" fill="#000" stroke="url(#gradDash)"/>
+      <rect x="-18" y="-12" width="36" height="22" rx="4" fill="#0b1220" stroke="url(#gradDash)"/>
       <!-- widgets -->
       <rect x="-14" y="-8" width="8" height="6" rx="1" fill="#22c55e" opacity="0.6">
         <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" repeatCount="indefinite"/>
@@ -207,16 +207,7 @@
         <animate attributeName="opacity" values="0.3;1;0.6" dur="1.4s" begin="0.4s" repeatCount="indefinite"/>
       </rect>
       <!-- flame shimmer -->
-      <g filter="url(#softGlow)">
-        <path d="M0,-20 q-8,10 0,18 q8,-8 0,-18" fill="url(#flameGlow)">
-          <animate attributeName="d" dur="0.7s" repeatCount="indefinite"
-                   values="M0,-20 q-8,10 0,18 q8,-8 0,-18; M0,-22 q-9,12 0,20 q9,-10 0,-20; M0,-20 q-8,10 0,18 q8,-8 0,-18"/>
-        </path>
-        <circle cx="0" cy="-10" r="5" fill="url(#gradFlame)" opacity="0.8">
-          <animate attributeName="r" values="5;6;5" dur="0.7s" repeatCount="indefinite"/>
-        </circle>
-      </g>
-    </g>
+
 
     <!-- Sparkline trail (behind) -->
     <path id="trail" d="M -160 -8 Q -120 -2 -80 -6 T 0 -2" fill="none" stroke="#22d3ee" stroke-width="2"
