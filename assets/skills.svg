@@ -1,155 +1,121 @@
-<svg viewBox="0 0 1100 260" width="1100" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skills Vibrant — with brand logos">
-  <title>Core Skills — animated with brand icons</title>
+<svg viewBox="0 0 1100 300" width="1100" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Core Skills Animated">
   <style><![CDATA[
-    .h{font:700 20px "Segoe UI", Roboto, Arial, sans-serif; fill:#e5e7eb}
-    .t{font:600 14px "Segoe UI", Roboto, Arial, sans-serif; fill:#cbd5e1}
-    .icon-label { pointer-events: none; }
+    .h{font:700 22px Segoe UI,Roboto,Arial,sans-serif;fill:#e5e7eb}
+    .t{font:600 14px Segoe UI,Roboto,Arial,sans-serif;fill:#cbd5e1}
+    .p{font:700 12px Segoe UI,Roboto,Arial,sans-serif;fill:#ffffff}
   ]]></style>
 
   <defs>
-    <!-- moving gradients -->
-    <linearGradient id="b1" gradientUnits="userSpaceOnUse" x1="0" x2="600">
+    <linearGradient id="b1" x1="0" x2="1">
       <stop offset="0%" stop-color="#06b6d4"/>
-      <stop offset="50%" stop-color="#22d3ee"/>
-      <stop offset="100%" stop-color="#06b6d4"/>
-      <animate attributeName="gradientTransform" type="translate" values="-300,0;300,0;-300,0" dur="2.6s" repeatCount="indefinite"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
-
-    <linearGradient id="b2" gradientUnits="userSpaceOnUse" x1="0" x2="600">
+    <linearGradient id="b2" x1="0" x2="1">
       <stop offset="0%" stop-color="#a78bfa"/>
-      <stop offset="50%" stop-color="#8b5cf6"/>
-      <stop offset="100%" stop-color="#a78bfa"/>
-      <animate attributeName="gradientTransform" type="translate" values="300,0;-300,0;300,0" dur="3s" repeatCount="indefinite"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-
-    <linearGradient id="b3" gradientUnits="userSpaceOnUse" x1="0" x2="600">
+    <linearGradient id="b3" x1="0" x2="1">
       <stop offset="0%" stop-color="#f43f5e"/>
-      <stop offset="50%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#f43f5e"/>
-      <animate attributeName="gradientTransform" type="translate" values="-200,0;200,0;-200,0" dur="2.2s" repeatCount="indefinite"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
     </linearGradient>
 
-    <linearGradient id="gInner" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#000000" stop-opacity="0.03"/>
-    </linearGradient>
-
-    <filter id="barShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.45"/>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <clipPath id="clipCard"><rect x="0" y="-22" width="640" height="44" rx="22"/></clipPath>
-
-    <!-- badge background gradients -->
-    <linearGradient id="icA" x1="0" x2="1"><stop offset="0" stop-color="#0ea5a4"/><stop offset="1" stop-color="#06b6d4"/></linearGradient>
-    <linearGradient id="icB" x1="0" x2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
-    <linearGradient id="icC" x1="0" x2="1"><stop offset="0" stop-color="#fb7185"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
-    <linearGradient id="icD" x1="0" x2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/></linearGradient>
   </defs>
 
-  <!-- background -->
-  <rect x="0" y="0" width="1100" height="260" rx="18" fill="#070b16"/>
-
-  <!-- heading -->
+  <rect width="1100" height="300" rx="18" fill="#070b16"/>
   <text class="h" x="32" y="44">Core Skills</text>
 
-  <!-- row: Microsoft SQL Server logo (diamond/stack simplified) -->
-  <g transform="translate(32,72)" aria-hidden="false">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#icA)"/>
-      <!-- simplified SQL Server diamond stack (recognizable shape, small) -->
-      <g transform="translate(18,-6) scale(0.9)">
-        <path d="M0 -8 L8 -4 L0 0 L-8 -4 Z" fill="#071025"/>
-        <path d="M0 -4 L8 0 L0 4 L-8 0 Z" fill="#071025" opacity="0.92"/>
-        <path d="M0 0 L8 4 L0 8 L-8 4 Z" fill="#071025" opacity="0.88"/>
-      </g>
-    </g>
 
-    <text class="t" x="48" y="14">SQL Server</text>
+  <!-- SQL -->
+  <g transform="translate(32,80)">
+    <!-- SQL Icon -->
+    <g transform="translate(-4,3)">
+      <ellipse cx="18" cy="10" rx="14" ry="6" fill="#0ea5e9"/>
+      <rect x="4" y="10" width="28" height="16" fill="#0ea5e9"/>
+      <ellipse cx="18" cy="26" rx="14" ry="6" fill="#0284c7"/>
+    </g>
+    <text class="t" x="48" y="14">SQL</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="sqlGrow.end" dur="1.6s" values="720;734;720" repeatCount="indefinite"/>
+    <rect id="sql" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)">
+      <animate attributeName="width"
+        values="0;720;0"
+        dur="3s" begin="runnerAnim.begin+0.9s"
+        repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        keyTimes="0;0.5;1"/>
     </rect>
-
-    <animate id="sqlGrow" href="#sql" attributeName="width" values="0;720" dur="1.8s" fill="freeze"/>
-    <animate href="#sql" attributeName="width" values="720;734;720" dur="3s" begin="sqlGrow.end" repeatCount="indefinite"/>
+    <text class="p" x="820" y="16">80%</text>
   </g>
 
-  <!-- row: Python logo (official two-snake simplified) -->
-  <g transform="translate(32,110)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#icB)"/>
-      <!-- simplified Python logo: two snake heads -->
-      <g transform="translate(6,-8) scale(0.9)">
-        <path d="M6 0 C6 -6 0 -8 -4 -6 C-8 -4 -8 0 -6 2 C-4 4 0 4 4 2 C6 0 6 0 6 0 Z" fill="#ffd43b"/>
-        <circle cx="1" cy="-3.2" r="0.9" fill="#2b2b2b"/>
-        <path d="M6 8 C6 2 0 0 -4 2 C-8 4 -8 8 -6 10 C-4 12 0 12 4 10 C6 8 6 8 6 8 Z" transform="translate(8,2)" fill="#4b8bbe"/>
-        <circle cx="13" cy="9" r="0.9" fill="#fff"/>
-      </g>
-    </g>
 
+  <!-- Python -->
+  <g transform="translate(32,128)">
+    <!-- Python Icon -->
+    <g transform="translate(6,0)">
+      <circle cx="0" cy="10" r="8" fill="#3776ab"/>
+      <circle cx="6" cy="6" r="2" fill="#ffd43b"/>
+    </g>
     <text class="t" x="48" y="14">Python</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="pyGrow.end" dur="1.6s" values="690;704;690" repeatCount="indefinite"/>
+    <rect id="py" x="140" y="2" width="0" height="18" rx="9" fill="url(#b2)">
+      <animate attributeName="width"
+        values="0;690;0"
+        dur="3.2s" begin="runnerAnim.begin+1.4s"
+        repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        keyTimes="0;0.5;1"/>
     </rect>
-
-    <animate id="pyGrow" href="#py" attributeName="width" values="0;690" dur="2s" fill="freeze"/>
-    <animate href="#py" attributeName="width" values="690;704;690" dur="3.2s" begin="pyGrow.end" repeatCount="indefinite"/>
+    <text class="p" x="800" y="16">76%</text>
   </g>
 
-  <!-- row: Power BI logo (bars) -->
-  <g transform="translate(32,148)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#icC)"/>
-      <!-- Power BI bars (simplified official shape) -->
-      <g transform="translate(6,-6)">
-        <rect x="2" y="6" width="4" height="6" rx="1" fill="#071025"/>
-        <rect x="8" y="4" width="4" height="8" rx="1" fill="#071025"/>
-        <rect x="14" y="2" width="4" height="10" rx="1" fill="#071025"/>
-        <rect x="20" y="8" width="4" height="4" rx="1" fill="#071025"/>
-      </g>
-    </g>
 
+  <!-- Power BI -->
+  <g transform="translate(32,176)">
+    <!-- Power BI Icon -->
+    <g transform="translate(0,2)">
+      <rect x="0" y="2" width="8" height="16" rx="2" fill="#f2c435"/>
+      <rect x="12" y="6" width="6" height="12" rx="2" fill="#f2c435"/>
+      <rect x="22" y="0" width="6" height="18" rx="2" fill="#f2c435"/>
+    </g>
     <text class="t" x="48" y="14">Power BI</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="pbiGrow.end" dur="1.6s" values="640;652;640" repeatCount="indefinite"/>
+    <rect id="pbi" x="140" y="2" width="0" height="18" rx="9" fill="url(#b3)">
+      <animate attributeName="width"
+        values="0;640;0"
+        dur="3.4s" begin="runnerAnim.begin+1.9s"
+        repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        keyTimes="0;0.5;1"/>
     </rect>
-
-    <animate id="pbiGrow" href="#pbi" attributeName="width" values="0;640" dur="2.2s" fill="freeze"/>
-    <animate href="#pbi" attributeName="width" values="640;652;640" dur="3.1s" begin="pbiGrow.end" repeatCount="indefinite"/>
+    <text class="p" x="760" y="16">72%</text>
   </g>
 
-  <!-- row: Tableau logo (dot grid) -->
-  <g transform="translate(32,186)">
-    <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#icD)"/>
-      <!-- Tableau dot grid simplified -->
-      <g transform="translate(6,-6)">
-        <circle cx="6" cy="-6" r="1.8" fill="#071025"/>
-        <circle cx="14" cy="-6" r="1.8" fill="#071025"/>
-        <circle cx="6" cy="0"  r="1.8" fill="#071025"/>
-        <circle cx="14" cy="0"  r="1.8" fill="#071025"/>
-        <circle cx="10" cy="6"  r="1.8" fill="#071025"/>
-      </g>
-    </g>
 
+  <!-- Tableau -->
+  <g transform="translate(32,224)">
+    <!-- Tableau Icon -->
+    <g transform="translate(2,2)">
+      <circle cx="4" cy="8" r="2" fill="#ff8a00"/>
+      <circle cx="10" cy="8" r="2" fill="#34d399"/>
+      <circle cx="16" cy="8" r="2" fill="#3b82f6"/>
+    </g>
     <text class="t" x="48" y="14">Tableau</text>
 
     <rect x="140" y="2" width="900" height="18" rx="9" fill="#0f172a"/>
-    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)" filter="url(#barShadow)"/>
-    <rect x="140" y="2" width="0" height="18" rx="9" fill="url(#gInner)" pointer-events="none">
-      <animate attributeName="width" begin="tbGrow.end" dur="1.6s" values="600;612;600" repeatCount="indefinite"/>
+    <rect id="tb" x="140" y="2" width="0" height="18" rx="9" fill="url(#b1)">
+      <animate attributeName="width"
+        values="0;600;0"
+        dur="3.6s" begin="runnerAnim.begin+2.4s"
+        repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        keyTimes="0;0.5;1"/>
     </rect>
-
-    <animate id="tbGrow" href="#tb" attributeName="width" values="0;600" dur="2.4s" fill="freeze"/>
-    <animate href="#tb" attributeName="width" values="600;612;600" dur="3.4s" begin="tbGrow.end" repeatCount="indefinite"/>
+    <text class="p" x="740" y="16">68%</text>
   </g>
+
 </svg>
