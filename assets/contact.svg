@@ -5,7 +5,7 @@
   <text class="t" x="32" y="46">Contact</text>
   <g id="email" transform="translate(32,78)" filter="url(#cardShadow)">
     <rect x="0" y="-22" width="430" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
-    <text class="s" x="18" y="6">✉️  ಕ್ರ ruthik84@gmail.com</text>
+    <text class="s" x="18" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
   </g>
   <g id="li" transform="translate(480,78)" filter="url(#cardShadow)">
     <rect x="0" y="-22" width="300" height="44" rx="14" fill="#0f172a" stroke="url(#accent)"/>
@@ -13,7 +13,7 @@
   </g>
   <g id="pf" transform="translate(800,78)" filter="url(#cardShadow)">
     <rect x="0" y="-22" width="268" height="44" rx="14" fill="#0f172a" stroke="url(#primary)"/>
-    <text class="s" x="18" y="6">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
+    <text class="s" x="18" y="6">✉️  ruthik84@gmail.com</text>
   </g>
   <animateTransform href="#email" attributeName="transform" type="translate" values="32,78;28,78;32,78" dur="1.6s" repeatCount="indefinite"/>
   <animateTransform href="#li" attributeName="transform" type="translate" values="480,78;484,78;480,78" dur="1.8s" repeatCount="indefinite"/>
