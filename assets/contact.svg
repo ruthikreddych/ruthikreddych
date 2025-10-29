@@ -1,75 +1,68 @@
-<svg viewBox="0 0 1100 160" width="1100" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact – Vibrant & Padded">
+<svg viewBox="0 0 1100 160" width="1100" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact Section">
   <style><![CDATA[
-    .title { font: 700 22px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#e5e7eb }
-    .text  { font: 600 16px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; fill:#ffffff }
+    .title { font: 700 22px Segoe UI,Roboto,Arial,sans-serif; fill:#e5e7eb }
+    .text  { font: 600 16px Segoe UI,Roboto,Arial,sans-serif; fill:#ffffff }
   ]]></style>
 
   <defs>
-    <!-- Vibrant gradients -->
-    <linearGradient id="primary" x1="0" x2="1">
-      <stop offset="0%"  stop-color="#06b6d4"/>
+    <!-- Gradients -->
+    <linearGradient id="gradBlue" x1="0" x2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
       <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" x2="1">
-      <stop offset="0%"  stop-color="#f43f5e"/>
+    <linearGradient id="gradPink" x1="0" x2="1">
+      <stop offset="0%" stop-color="#f43f5e"/>
       <stop offset="100%" stop-color="#f59e0b"/>
     </linearGradient>
-    <linearGradient id="secondary" x1="0" x2="1">
-      <stop offset="0%"  stop-color="#22c55e"/>
+    <linearGradient id="gradGreen" x1="0" x2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
       <stop offset="100%" stop-color="#14b8a6"/>
     </linearGradient>
 
-    <!-- Soft card shadow -->
-    <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.28"/>
+    <!-- Shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
     </filter>
 
-    <!-- Subtle vertical shine -->
+    <!-- Surface shine -->
     <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.0"/>
     </linearGradient>
   </defs>
 
-  <!-- Background with bigger outer padding -->
+  <!-- Background -->
   <rect x="0" y="0" width="1100" height="160" rx="20" fill="#070b16"/>
-  <!-- Top padding ↑ increased; title moved down -->
-  <text x="40" y="54" class="title">Contact</text>
+  <text class="title" x="40" y="50">Contact</text>
 
-  <!-- Layout:
-       Outer horizontal margin: 40px (both sides)
-       Chip width: 320px   Gap between chips: 30px
-       Positions: x = 40, 390, 740  (40 + 320 + 30 + 320 + 30 + 320 + 40 = 1100)
-       Vertical placement: baseline y = 100 (more breathing room)
-       Chip height: 52px, internal text padding: 22px left, vertically centered
-  -->
-
-  <!-- Chip 1: Portfolio -->
-  <g id="chip-portfolio" transform="translate(40,100)" filter="url(#cardShadow)">
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#primary)"/>
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="22" y="0" dominant-baseline="middle">🌐  ruthikreddych.github.io/Ruthik-protfolio/</text>
+  <!-- Chip positions: 40, 390, 740 -->
+  <!-- Portfolio -->
+  <g id="port" transform="translate(40,100)" filter="url(#shadow)">
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#gradBlue)"/>
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.3"/>
+    <text class="text" x="20" y="0" dominant-baseline="middle">🌐 ruthikreddych.github.io/Ruthik-protfolio/</text>
   </g>
 
-  <!-- Chip 2: LinkedIn -->
-  <g id="chip-linkedin" transform="translate(390,100)" filter="url(#cardShadow)">
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#accent)"/>
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="22" y="0" dominant-baseline="middle">🔗  linkedin.com/in/ruthikreddy-cheruku/</text>
+  <!-- LinkedIn -->
+  <g id="linkedin" transform="translate(390,100)" filter="url(#shadow)">
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#gradPink)"/>
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.3"/>
+    <text class="text" x="20" y="0" dominant-baseline="middle">🔗 linkedin.com/in/ruthikreddy-cheruku/</text>
   </g>
 
-  <!-- Chip 3: Email -->
-  <g id="chip-email" transform="translate(740,100)" filter="url(#cardShadow)">
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#secondary)"/>
-    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.35"/>
-    <text class="text" x="22" y="0" dominant-baseline="middle">✉️  ruthik84@gmail.com</text>
+  <!-- Email -->
+  <g id="email" transform="translate(740,100)" filter="url(#shadow)">
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#gradGreen)"/>
+    <rect x="0" y="-26" width="320" height="52" rx="16" fill="url(#shine)" opacity="0.3"/>
+    <text class="text" x="20" y="0" dominant-baseline="middle">✉️ ruthik84@gmail.com</text>
   </g>
 
-  <!-- Gentle breathing motion (very small, keeps padding intact) -->
-  <animateTransform href="#chip-portfolio" attributeName="transform" type="translate"
-    values="40,100; 38,100; 40,100" dur="2.2s" repeatCount="indefinite"/>
-  <animateTransform href="#chip-linkedin" attributeName="transform" type="translate"
-    values="390,100; 392,100; 390,100" dur="2.4s" repeatCount="indefinite"/>
-  <animateTransform href="#chip-email" attributeName="transform" type="translate"
-    values="740,100; 738,100; 740,100" dur="2.6s" repeatCount="indefinite"/>
+  <!-- Subtle breathing motion -->
+  <animateTransform href="#port" attributeName="transform" type="translate"
+    values="40,100;38,100;40,100" dur="2.4s" repeatCount="indefinite"/>
+  <animateTransform href="#linkedin" attributeName="transform" type="translate"
+    values="390,100;392,100;390,100" dur="2.6s" repeatCount="indefinite"/>
+  <animateTransform href="#email" attributeName="transform" type="translate"
+    values="740,100;738,100;740,100" dur="2.8s" repeatCount="indefinite"/>
+
 </svg>
