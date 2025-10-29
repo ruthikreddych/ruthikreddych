@@ -82,7 +82,7 @@
   <!-- ROW 2: Python (moved down for larger vertical gap) -->
   <g transform="translate(32,124)">
     <g transform="translate(0,-4)" class="icon-label" aria-hidden="true">
-      <rect x="0" y="-12" width="36" height="36" rx="9" fill="url(#badgeBg)"/>
+      
       <!-- INSERTED: Python icon from code1 -->
       <g id="logo-python-official" transform="translate(4,4) scale(0.9)">
         <g transform="translate(6,0)">
